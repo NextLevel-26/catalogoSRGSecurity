@@ -1,0 +1,261 @@
+======================================================================
+  REPORTE DE IMÁGENES - SRG Security
+  Fecha: 2026-04-28 13:04:32
+======================================================================
+
+Total de productos: 239
+Con imagen existente: 129
+Descargadas ahora: 0
+Todavía faltantes: 110
+
+──────────────────────────────────────────────────────────────────────
+  IMÁGENES FALTANTES - Debes agregar manualmente:
+──────────────────────────────────────────────────────────────────────
+
+Producto                                           Archivo necesario
+────────────────────────────────────────────────── ──────────────────────────────
+CENTRAL DSC + TECLADO5501 + FUENTE 220V/9V         images/central-dsc.jpg
+SENSOR APERTURA MS37                               images/sensor-ms37.jpg
+SENSOR APERTURA ALEPH                              images/sensor-aleph.jpg
+SENSOR APERTURA METALICO                           images/sensor-aper-metal.jpg
+MS-60L SENSOR CORTINA METALICO                     images/ms-60l.jpg
+SENSOR MOVIMIENTO LC-100                           images/sensor-lc100.jpg
+SENSOR MOVIMIENTO LC-200                           images/sensor-lc200.jpg
+SENSOR MOVIMIENTO LC104                            images/sensor-lc104.jpg
+TECLADO 1555 DSC                                   images/teclado-1555.jpg
+TECLADO 5501 DSC                                   images/teclado-5501.jpg
+RECEPTORA WIFI                                     images/receptora-wifi.jpg
+PIR WIFI RF DSC                                    images/pir-wifi-dsc.jpg
+SENSOR APERTURA RF WIFI C/PILA                     images/sensor-rf-wifi.jpg
+SIRENA MP100 INT                                   images/sirena-mp100.jpg
+SIRENA MP150 EXT                                   images/sirena-mp150.jpg
+SIRENA SL400 EXT LUZ                               images/sirena-sl400.jpg
+SIRENA SL350 L LUZ                                 images/sirena-sl350.jpg
+SIRENA HC S35 NEGRA INT                            images/sirena-hc-s35.jpg
+SIRENA NAUTICA 30W EXT                             images/sirena-nautica.jpg
+LUZ AZUL SL01L                                     images/luz-azul.jpg
+GABINETE ALARMA                                    images/gabinete-alarma.jpg
+BARRERA 15 MTS                                     images/barrera-15.jpg
+BARRERA 60 MTS                                     images/barrera-60.jpg
+BATERIA 12V 7 AMP                                  images/bateria-12v.jpg
+RECEPTORA EB19                                     images/receptora-eb19.jpg
+CONTROL RECEPCIONADORA EB19                        images/control-eb19.jpg
+PIR 808                                            images/pir-808.jpg
+PIR DGB2 DOBLE TECNOLOGIA                          images/pir-dgb2.jpg
+SIRENA MP500 30W NAUTICA                           images/sirena-mp500.jpg
+PIR EXTERIOR                                       images/pir-exterior.jpg
+COMUNICADOR IP500                                  images/comunicador-ip500.jpg
+KIT 2 CAM COMPLETO DAHUA                           images/kit-2cam-dahua.jpg
+KIT 3 CAM COMPLETO DAHUA                           images/kit-3cam-dahua.jpg
+KIT 4 CAM COMPLETO DAHUA                           images/kit-4cam-dahua.jpg
+KIT 6 CAM COMPLETO DAHUA                           images/kit-6cam-dahua.jpg
+KIT 8 CAM COMPLETO DAHUA                           images/kit-8cam-dahua.jpg
+KIT 16 CAM COMPLETO DAHUA                          images/kit-16cam-dahua.jpg
+KIT 2 CAM FULL COLOR + AUDIO DAHUA                 images/kit-2cam-fc.jpg
+KIT 4 CAM FULL COLOR + AUDIO DAHUA                 images/kit-4cam-fc.jpg
+KIT 6 CAM FULL COLOR + AUDIO DAHUA                 images/kit-6cam-fc.jpg
+KIT 8 CAM FULL COLOR + AUDIO DAHUA                 images/kit-8cam-fc.jpg
+KIT 16 CAM FULL COLOR + AUDIO DAHUA                images/kit-16cam-fc.jpg
+KIT 2 CAM 5MPX COMPLETO DAHUA                      images/kit-2cam-5mpx.jpg
+KIT 4 CAM 5MPX COMPLETO DAHUA                      images/kit-4cam-5mpx.jpg
+KIT 6 CAM 5MPX COMPLETO DAHUA                      images/kit-6cam-5mpx.jpg
+KIT 8 CAM 5MPX COMPLETO DAHUA                      images/kit-8cam-5mpx.jpg
+KIT 16 CAM 5MPX COMPLETO DAHUA                     images/kit-16cam-5mpx.jpg
+KIT 2 CAM 5MPX FULL COLOR + AUDIO                  images/kit-2cam-5mpx-fc.jpg
+KIT 4 CAM 5MPX FULL COLOR + AUDIO                  images/kit-4cam-5mpx-fc.jpg
+KIT 6 CAM 5MPX FULL COLOR + AUDIO                  images/kit-6cam-5mpx-fc.jpg
+KIT 8 CAM 5MPX FULL COLOR + AUDIO                  images/kit-8cam-5mpx-fc.jpg
+KIT 16 CAM 5MPX FULL COLOR + AUDIO                 images/kit-16cam-5mpx-fc.jpg
+XVR DAHUA + 2 CAM CYGNUS                           images/kit-dahua-2cyg.jpg
+XVR DAHUA + 4 CAM CYGNUS                           images/kit-dahua-4cyg.jpg
+XVR DAHUA + 6 CAM CYGNUS                           images/kit-dahua-6cyg.jpg
+XVR DAHUA + 8 CAM CYGNUS                           images/kit-dahua-8cyg.jpg
+XVR DAHUA + 2 CAM FULL COLOR CYGNUS                images/kit-dahua-2cyg-fc.jpg
+XVR DAHUA + 4 CAM FULL COLOR CYGNUS                images/kit-dahua-4cyg-fc.jpg
+XVR DAHUA + 6 CAM FULL COLOR CYGNUS                images/kit-dahua-6cyg-fc.jpg
+XVR DAHUA + 8 CAM FULL COLOR CYGNUS                images/kit-dahua-8cyg-fc.jpg
+XVR CYGNUS + 2 CAM CYGNUS (DOMO)                   images/kit-cyg-2domo.jpg
+XVR CYGNUS + 4 CAM CYGNUS (DOMO)                   images/kit-cyg-4domo.jpg
+XVR CYGNUS + 6 CAM CYGNUS (DOMO)                   images/kit-cyg-6domo.jpg
+XVR CYGNUS + 8 CAM CYGNUS (DOMO)                   images/kit-cyg-8domo.jpg
+CENTRAL ANM 24 NET                                 images/anm-24net.jpg
+AMT 1000 SMART                                     images/amt-1000.jpg
+AMT 2018 SMART                                     images/amt-2018.jpg
+SENSOR MOV 1000 PET CABLEADO                       images/mov-1000-pet.jpg
+SENSOR MOV 1000 SMART                              images/mov-1000-smart.jpg
+SENS APER XAC SMART                                images/aper-xac.jpg
+SENSOR MOV 7000 CABLEADO                           images/mov-7000-cab.jpg
+SENSOR MOV 7000 SMART                              images/mov-7000-smart.jpg
+RECEPTOR RF XAR 4000 WIFI                          images/xar-4000.jpg
+TECLADO XAT 3000 LED                               images/xat-3000.jpg
+TECLADO XAT 4000 LCD                               images/xat-4000.jpg
+CONTROL XAC 4000 SMART                             images/control-xac.jpg
+CENTRAL 6012 INTELBRAS                             images/central-6012.jpg
+CENTRAL 6012 NET INTELBRAS                         images/central-6012net.jpg
+AISLADORES DOBLE PINLOCK                           images/aislador-pinlock.jpg
+AISLADORES ROSCADOS                                images/aislador-roscado.jpg
+RESORTES GALVANIZADOS                              images/resorte-galv.jpg
+CARTEL PELIGRO                                     images/cartel-peligro.jpg
+JABALINA 3/8 1M CON CHICOTE                        images/jabalina.jpg
+CABLE DE ALTA X 50 MTS                             images/cable-alta-50.jpg
+BOBINA ALAMBRE ALUMINIO X 100 MTS                  images/bobina-100.jpg
+BOBINA ALAMBRE ALUMINIO X 500 MTS                  images/bobina-500.jpg
+SIRENA NEGRA                                       images/sirena-negra.jpg
+SIRENA MP150 EXT                                   images/sirena-mp150-ext.jpg
+BATERIA 12V 7 AMP                                  images/bateria-cerco.jpg
+CAJA ESTANCO 9X9                                   images/caja-9x9.jpg
+DISCO RIGIDO 250GB                                 images/hdd-250.jpg
+DISCO RIGIDO 1TB                                   images/hdd-1tb.jpg
+DISCO RIGIDO 2TB                                   images/hdd-2tb.jpg
+DISCO RIGIDO 2TB NUEVO                             images/hdd-2tb-nuevo.jpg
+DISCO RIGIDO 3TB                                   images/hdd-3tb.jpg
+DISCO RIGIDO 4TB                                   images/hdd-4tb.jpg
+DISCO RIGIDO 4TB NUEVO                             images/hdd-4tb-nuevo.jpg
+DISCO SOLIDO 120GB                                 images/ssd-120.jpg
+MICRO SD 64GB                                      images/microsd-64.jpg
+MICRO SD 128GB                                     images/microsd-128.jpg
+ZAPATILLA BLANCA 4T                                images/zapatilla-blanca.jpg
+ZAPATILLA NEGRA 5T                                 images/zapatilla-negra.jpg
+ROUTER DAHUA                                       images/router-dahua.jpg
+TESTER RJ45                                        images/tester-rj45.jpg
+DS-2CE16D0T-EXIPF BULLET 2MPX                      images/hik-bullet-2mpx.jpg
+DS-2CE76D0T-EXIPF DOMO 2MPX                        images/hik-domo-2mpx.jpg
+DS-2CE16D0T-LPFS BULLET SMART LIGHT                images/hik-bullet-sl.jpg
+DS-2CE76D0T-LPFS DOMO SMART LIGHT                  images/hik-domo-sl.jpg
+DS-2CE10DF0T-PF BULLET COLOR VU                    images/hik-bullet-cv.jpg
+DS-2CE70DF0T-PF DOMO COLOR VU                      images/hik-domo-cv.jpg
+
+
+──────────────────────────────────────────────────────────────────────
+  TODAS LAS IMÁGENES ENCONTRADAS:
+──────────────────────────────────────────────────────────────────────
+
+  ✅ XVR 1080 4CH                                  → xvr-1080-4ch.jpg
+  ✅ XVR 1080 8CH                                  → xvr-1080-8ch.jpg
+  ✅ XVR 1080 16CH                                 → xvr-1080-16ch.jpg
+  ✅ XVR 1080 32CH                                 → xvr-1080-32ch.jpg
+  ✅ BULLET B1A21P                                 → bullet-b1a21p.jpg
+  ✅ DOMO T1A21P                                   → domo-t1a21p.jpg
+  ✅ BULLET B2A21P (Metal)                         → bullet-b2a21p--metal.jpg
+  ✅ DOMO T2A21P (Metal)                           → domo-t2a21p.jpg
+  ✅ BULLET IL-A                                   → bullet-il-a.jpg
+  ✅ DOMO IL-A                                     → domo-il-a.jpg
+  ✅ DOMO VF D3A21P                                → domo-d3a21p.jpg
+  ✅ BULLET VF 1200RP-Z                            → bullet-vf-1200rp-z.jpg
+  ✅ DOMO PTZ PT1200                               → domo-ptz-pt1200.jpg
+  ✅ HFW1200DP                                     → hfw1200dp.jpg
+  ✅ DH-IPC-HFW1230S1P                             → dh-ipc-hfw1230s1p.jpg
+  ✅ DH-IPC-HDW1230T1P                             → dh-ipc-hdw1230t1p.jpg
+  ✅ DH-IPC-HFW1239S1P-LED                         → dh-ipc-hfw1239s1p-led.jpg
+  ✅ DH-IPC-HDW1230VP-SA                           → dh-ipc-hdw1230vp-sa.jpg
+  ✅ XVR 5MPX 4CH                                  → xvr-5mpx-4ch.jpg
+  ✅ XVR 5MPX 8CH                                  → xvr-5mpx-8ch.jpg
+  ✅ XVR 5MPX 8CH i3                               → xvr-5mpx-8ch-i3.jpg
+  ✅ XVR 5MPX 16CH                                 → xvr-5mpx-16ch.jpg
+  ✅ XVR 5MPX 16CH -it                             → xvr-5mpx-16ch--it.jpg
+  ✅ XVR 5MPX 16CH i3                              → xvr-5mpx-16ch-i3.jpg
+  ✅ XVR 5MPX 32CH i3                              → xvr-5mpx-32ch-i3.jpg
+  ✅ BULLET 1500CP                                 → bullet-b1-a-51.jpg
+  ✅ DOMO T1A51P                                   → domo-t1a21p.jpg
+  ✅ DOMO T2A51P (Metal)                           → domo-t2a51p-metal.jpg
+  ✅ BULLET B1 A 51                                → bullet-b1-a-51.jpg
+  ✅ BULLET IL-A 5MPX                              → bullet-il-a-5mpx.jpg
+  ✅ DOMO IL-A 5MPX                                → domo-il-a-5mpx.jpg
+  ✅ BULLET VF 5MPX                                → bullet-vf-5mpx.jpg
+  ✅ DOMO 5MPX AUDIO                               → domo-5mpx-audio-1500tlmqp.jpg
+  ✅ NVR1104HS-S3-H                                → nvr1104hs-s3-h.jpg
+  ✅ NVR1104HS-POE-S3/H                            → nvr1104hs-s3-h.jpg
+  ✅ NVR 8CH 1108HS-S3/H                           → nvr1108hs-w-s2-8ch.jpg
+  ✅ NVR 8CH 1108HS-8P-S3/H                        → nvr-8-ch-dahua-1108hs-8p-s3-h-poe.jpg
+  ✅ NVR2116HS-S                                   → nvr2116hs-s.jpg
+  ✅ NVR2216-4KS3                                  → nvr2216-4ks3.jpg
+  ✅ NVR2216-16P-4KS3                              → nvr2216-4ks3.jpg
+  ✅ NVR4232-4KS2-I                                → nvr4232-4ks2-i.jpg
+  ✅ NVR4232-4K S3                                 → nvr-4232--4k-s3.jpg
+  ✅ NVR4232-16POE-4KS3                            → nvr4232-16poe-4ks3.jpg
+  ✅ NVR5864-EI 64CH                               → nvr5864-ei-64-ch.jpg
+  ✅ PFS3005-5ET-L                                 → pfs3005-5et-l.jpg
+  ✅ DH-PFS3005-4ET60-V2 POE                       → dh-pfs3009-8et-96-v2-poe.jpg
+  ✅ DH-PFS3009-8ET-96-V2 POE                      → dh-pfs3009-8et-96-v2-poe.jpg
+  ✅ DH-PFS3009-8ET-96-V2 (4P)                     → dh-pfs3009-8et-96-v2--4p-poe.jpg
+  ✅ DH-CS4218-16ET-135 16P                        → dh-pfs3009-8et-96-v2-poe.jpg
+  ✅ KIT MARSHALL GO PLUS (PRO/IP)                 → kit-marshall-go-plus---pro---ip.jpg
+  ✅ KIT MARSHALL 4G                               → kit-marshall-4g.jpg
+  ✅ PULSAR INFINIT                                → pulsar-infinit.jpg
+  ✅ SIRENA SP-400                                 → sirena-sp-400.jpg
+  ✅ REMO COVER 3B                                 → remo---remo-touch---4b.jpg
+  ✅ REMO TOUCH 4B                                 → remo---remo-touch---4b.jpg
+  ✅ BATERIA 12V 7 AMPER                           → bateria---12-vol-7-amper.jpg
+  ✅ IRIS PET INFINIT                              → iris-pet-infinit.jpg
+  ✅ PIR EXTERIOR IRIS PET OUTDOOR                 → pir-exterior---iris-pet-outdoor.jpg
+  ✅ TECLADO KEY CODER INFINIT                     → teclado---key-coder-infinit.jpg
+  ✅ BALUM                                         → balum.jpg
+  ✅ BALUM RJ45                                    → balum-rj45.jpg
+  ✅ PLUG MACHO                                    → plug-macho.jpg
+  ✅ PLUG HEMBRA                                   → plug-hembra.jpg
+  ✅ SPLITER 1X4                                   → spliter-1x4.jpg
+  ✅ SPLITER 1X8                                   → spliter-1x8.jpg
+  ✅ RJ45 X 50 UNIDADES                            → rj45-x-50-unidades.jpg
+  ✅ RJ45 X 100 UNIDADES                           → rj45-x-100-unidades.jpg
+  ✅ CABLE DE RED                                  → cable-de-red.jpg
+  ✅ CABLE HDMI 1MTS                               → cable-hdmi-1mts.jpg
+  ✅ CABLE HDMI 3MTS                               → cable-hdmi-3mts.jpg
+  ✅ CABLE HDMI 5MTS                               → cable-hdmi-5mts.jpg
+  ✅ CABLE HDMI 10MTS                              → cable-hdmi-10mts.jpg
+  ✅ CABLE HDMI 15MTS                              → cable-hdmi-15mts.jpg
+  ✅ CABLE HDMI 20MTS                              → cable-hdmi-20mts.jpg
+  ✅ CABLE HDMI 30MTS                              → cable-hdmi-30mts.jpg
+  ✅ CONVERTIDOR RJ45/VGA                          → convertidor-rj45-vga.jpg
+  ✅ CONVERTIDOR RJ45/HDMI                         → convertidor-rj45-hdmi.jpg
+  ✅ FUENTE 2AMP                                   → fuente-2amp.jpg
+  ✅ FUENTE 3AMP                                   → fuente-3amp.jpg
+  ✅ FUENTE 5AMP INTERLOCK                         → fuente-5amp-interlock.jpg
+  ✅ FUENTE 6AMP INTERLOCK                         → fuente-6amp-interlock.jpg
+  ✅ FUENTE 7AMP INTERLOCK                         → fuente-7amp-interlock.jpg
+  ✅ FUENTE 5AMP METALICA                          → fuente-5amp-metalica.jpg
+  ✅ FUENTE 10AMP METALICA                         → fuente-10amp-metalica.jpg
+  ✅ FUENTE 15AMP METALICA                         → fuente-15amp-metalica.jpg
+  ✅ UPS 600VA                                     → ups-600va.jpg
+  ✅ UPS 1000VA                                    → ups-1000va.jpg
+  ✅ CAJA ESTANCO 11X11                            → caja-estanco-11x11.jpg
+  ✅ GABINETE 800C                                 → gabinete-800c.jpg
+  ✅ GABINETE 33X33 BLANCO                         → gabinete-33x33-blanco.jpg
+  ✅ GABINETE METALICO                             → gabinete-metalico.jpg
+  ✅ GABINETE AZUL                                 → gabinete-azul.jpg
+  ✅ GABINETE GRANDE PLASTICO 800F                 → gabinete-grande-plastico-800f.jpg
+  ✅ GABINETE C/LLAVE                              → gabinete-c-llave.jpg
+  ✅ RACK 4 UNIDADES                               → rack-4-unidades.jpg
+  ✅ RACK 6 UNIDADES                               → rack-6-unidades.jpg
+  ✅ RACK 9 UNIDADES                               → rack-9-unidades.jpg
+  ✅ CABLE UTP X MTS                               → cable-utp-x-mts.jpg
+  ✅ CABLE UTP X 100MTS                            → cable-utp-x-100mts.jpg
+  ✅ CABLE UTP X305MTS PLUS                        → cable-utp-x305mts-plus.jpg
+  ✅ CABLE UTP X305MTS SUDVISION                   → cable-utp-x305mts-sudvision.jpg
+  ✅ CABLE UTP 100% COBRE HELLERMANN               → cable-utp-100--cobre-hellermann.jpg
+  ✅ CABLE UTP 100% COBRE DAHUA                    → cable-utp-100-cobre-dahua.jpg
+  ✅ CABLE UTP 100% COBRE X 100MTS                 → cable-utp-100--cobre-x-100mts.jpg
+  ✅ DISCO RIGIDO 320GB                            → disco-rigido-320gb.jpg
+  ✅ DISCO RIGIDO 500GB                            → disco-rigido-320gb.jpg
+  ✅ DISCO SOLIDO 256GB DAHUA                      → disco-solido-256gb-dahua.jpg
+  ✅ DISCO SOLIDO 480GB DAHUA                      → disco-solido-480gb-dahua.jpg
+  ✅ DISCO SOLIDO 1TB                              → disco-solido-1tb.jpg
+  ✅ MICRO SD 256GB                                → micro-sd-256-gb.jpg
+  ✅ REJA 15X15                                    → reja-15x15.jpg
+  ✅ REJA 20X20                                    → reja-20x20.jpg
+  ✅ ROUTER IMOU                                   → router-imou.jpg
+  ✅ ROUTER GLC                                    → router-glc.jpg
+  ✅ ROUTER RUIJIE RG-EW300N                       → router-ruijie-rg-ew300n.jpg
+  ✅ CRIMPEADORA                                   → crimpeadora.jpg
+  ✅ DS-7204HGHI-M1                                → nvr1104hs-s3-h.jpg
+  ✅ DS-7208HGHI-M1                                → nvr1108hs-w-s2-8ch.jpg
+  ✅ DS-7216HGHI-M1                                → nvr2116hs-s.jpg
+  ✅ CY XVR6104                                    → xvr-5mpx-4ch.jpg
+  ✅ CY XVR6108                                    → xvr-5mpx-8ch.jpg
+  ✅ CY XVR6116                                    → xvr-5mpx-16ch.jpg
+  ✅ CY HDX 1200 D DOMO 2MPX                       → domo-t1a21p.jpg
+  ✅ CY HDX 1200 DI DOMO EXT 2MPX                  → domo-t2a21p.jpg
+  ✅ CY HDX 1200 F BULLET 2MPX                     → bullet-b1a21p.jpg
+  ✅ CY HDX 1200 FUA BULLET 2MPX                   → bullet-b2a21p--metal.jpg
+  ✅ CY HDX 1200 DUA DOMO 2MPX                     → domo-t2a21p.jpg
+  ✅ HDX 1500F BULLET 5MPX                         → bullet-b1-a-51.jpg
+  ✅ HDX 1500 FUA BULLET 5MPX FULL COLOR + AUDIO   → bullet-vf-5mpx.jpg

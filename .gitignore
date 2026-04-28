@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Imágenes grandes (opcional, pueden ser demasiadas)
+# images/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Entornos virtuales
+venv/
+env/

@@ -1,0 +1,1958 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRG Security - Cálido | Cámaras de Seguridad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #f59e0b;
+            --primary-dark: #d97706;
+            --dark-bg: #1c1008;
+            --card-bg: #2d1a06;
+            --card-border: #78350f;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: var(--text-light);
+        }
+
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 55px;
+            width: auto;
+        }
+
+        .logo-placeholder {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .logo-text p {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            background: rgba(245, 158, 11, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            transition: all 0.3s;
+        }
+
+        .phone-link:hover {
+            background: var(--primary);
+        }
+
+        .cart-btn {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .cart-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .cart-count {
+            background: #fff;
+            color: var(--primary);
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(100, 50, 5, 0.8) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2322c55e' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            padding: 15px 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-light);
+            padding: 15px 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid var(--primary);
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+        }
+
+        .features-section {
+            background: rgba(245, 158, 11, 0.05);
+            padding: 50px 20px;
+            border-top: 1px solid rgba(245, 158, 11, 0.2);
+            border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .brands-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .brands-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--text-muted);
+        }
+
+        .brands-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .brand-tag {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1));
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .catalog-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        .search-box {
+            margin-bottom: 40px;
+            position: relative;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 18px 20px 18px 55px;
+            border: 2px solid var(--card-border);
+            border-radius: 15px;
+            background: var(--card-bg);
+            color: var(--text-light);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-select {
+            padding: 12px 20px;
+            border: 2px solid var(--card-border);
+            border-radius: 10px;
+            background: var(--card-bg);
+            color: var(--text-light);
+            font-size: 0.9rem;
+            cursor: pointer;
+            min-width: 150px;
+            transition: all 0.3s;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .filter-select:hover {
+            border-color: var(--primary);
+        }
+
+        .filter-reset {
+            padding: 12px 20px;
+            border: 2px solid var(--card-border);
+            border-radius: 10px;
+            background: transparent;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-reset:hover {
+            background: var(--card-bg);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--card-border);
+        }
+
+        .category-title .icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .category-title h3 {
+            font-size: 1.4rem;
+        }
+
+        .category-title span {
+            background: var(--card-bg);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.15);
+        }
+
+        .product-image {
+            height: 180px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--card-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image .product-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-image .product-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-image .product-icon svg {
+            width: 80px;
+            height: 80px;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            color: var(--text-light);
+        }
+
+        .product-stock {
+            font-size: 0.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .add-btn {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .add-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+
+        .services-section {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(100, 50, 5, 0.5));
+            padding: 60px 20px;
+            margin-top: 50px;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: scale(1.02);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .about-section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .about-content {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--card-border);
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 60px 20px;
+        }
+
+        .contact-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-content p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 35px;
+            background: #fff;
+            color: var(--dark-bg);
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-btn i {
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            background: var(--dark-bg);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-modal.active {
+            display: flex;
+        }
+
+        .cart-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            width: 95%;
+            max-width: 650px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 30px;
+            border: 1px solid var(--card-border);
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .cart-header h2 {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover {
+            color: #fff;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .cart-empty i {
+            font-size: 4rem;
+            color: var(--card-border);
+            margin-bottom: 20px;
+        }
+
+        .cart-empty h3 {
+            margin-bottom: 10px;
+        }
+
+        .cart-empty p {
+            color: var(--text-muted);
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 15px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--card-border);
+            align-items: center;
+        }
+
+        .cart-item-image {
+            width: 70px;
+            height: 70px;
+            background: var(--dark-bg);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cart-item-image svg {
+            width: 50px;
+            height: 50px;
+        }
+
+        .cart-item-image i {
+            color: var(--text-muted);
+            font-size: 1.5rem;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-price {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .qty-btn {
+            background: var(--card-border);
+            border: none;
+            color: #fff;
+            width: 35px;
+            height: 35px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .qty-btn:hover {
+            background: var(--primary);
+        }
+
+        .qty {
+            font-weight: 700;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .remove-btn {
+            background: #ef4444;
+            border: none;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .remove-btn:hover {
+            background: #dc2626;
+        }
+
+        .cart-footer {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cart-total span:last-child {
+            color: var(--primary);
+        }
+
+        .whatsapp-btn {
+            background: #f59e0b;
+            color: #fff;
+            border: none;
+            width: 100%;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            background: #d97706;
+            transform: scale(1.02);
+        }
+
+        .whatsapp-btn i {
+            font-size: 1.5rem;
+        }
+
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: #fff;
+            padding: 18px 30px;
+            border-radius: 12px;
+            font-weight: 600;
+            z-index: 2000;
+            animation: slideUp 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @keyframes slideUp {
+            from {
+                bottom: -60px;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: -60px;
+                opacity: 0;
+            }
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px;
+            color: var(--text-muted);
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--card-border);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .logo-text {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-placeholder" id="logoPlaceholder">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <img src="logo.png" alt="SRG Security" id="logoImg" style="display: none;"
+                    onload="this.style.display='block'; document.getElementById('logoPlaceholder').style.display='none';">
+                <div class="logo-text">
+                    <h1><span style="color: #fff;">SRG</span> <span style="color: #ef4444;">Security</span></h1>
+                    <p>Vigilancia Profesional</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <a href="tel:011-3208-2261" class="phone-link">
+                    <i class="fas fa-phone"></i>
+                    011-3208-2261
+                </a>
+                <button class="cart-btn" onclick="openCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    Carrito
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Protege lo que <span>más importa</span></h1>
+            <p>Instalación profesional de cámaras de seguridad para casas, negocios y oficinas y venta de insumos</p>
+            <div class="hero-buttons">
+                <a href="#catalogo" class="btn-primary">
+                    <i class="fas fa-eye"></i>
+                    Ver Catálogo
+                </a>
+                <a href="https://wa.me/541132082261" class="btn-outline" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Cotización Gratis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-video"></i>
+                <h3>Cámaras HD</h3>
+                <p>Calidad Full HD y 4K</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-moon"></i>
+                <h3>Visión Nocturna</h3>
+                <p>Infrarrojo hasta 50m</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Monitoreo Móvil</h3>
+                <p>24/7 desde tu celular</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-tools"></i>
+                <h3>Instalación</h3>
+                <p>Técnicos profesionales</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>Soporte 24/7</h3>
+                <p>Mantenimiento incluido</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands-section">
+        <h2>Marcas con las que trabajamos</h2>
+        <div class="brands-grid">
+            <span class="brand-tag">DAHUA TECHNOLOGY</span>
+            <span class="brand-tag">HIKVISION</span>
+            <span class="brand-tag">IMOU / EZVIS</span>
+            <span class="brand-tag">MARSHALL</span>
+            <span class="brand-tag">INTELBRAS</span>
+            <span class="brand-tag">DSC</span>
+            <span class="brand-tag">GARNET</span>
+        </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+        <div class="section-header">
+            <h2>Nuestros Productos</h2>
+            <p>Encuentra todo lo que necesitas para tu sistema de seguridad</p>
+        </div>
+
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Buscar producto..." onkeyup="filterProducts()">
+        </div>
+
+        <div class="filter-bar">
+            <select id="filterBrand" class="filter-select" onchange="filterProducts()">
+                <option value="">Todas las Marcas</option>
+                <option value="DAHUA">DAHUA</option>
+                <option value="HIKVISION">HIKVISION</option>
+                <option value="IMOU">IMOU</option>
+                <option value="INTELBRAS">INTELBRAS</option>
+                <option value="CYGNUS">CYGNUS</option>
+                <option value="MARSHALL">MARSHALL</option>
+                <option value="DSC">DSC</option>
+                <option value="GARNET">GARNET</option>
+            </select>
+            <select id="filterType" class="filter-select" onchange="filterProducts()">
+                <option value="">Todos los Tipos</option>
+                <option value="camara">Cámaras</option>
+                <option value="grabador">Grabadores</option>
+                <option value="kit">Kits</option>
+                <option value="alarma">Alarmas</option>
+                <option value="red">Red/Switch</option>
+                <option value="accesorio">Accesorios</option>
+                <option value="cerco">Cerco Eléctrico</option>
+            </select>
+            <button class="filter-reset" onclick="resetFilters()">
+                <i class="fas fa-times"></i> Limpiar
+            </button>
+        </div>
+
+        <div id="productsContainer"></div>
+    </section>
+
+    <section class="services-section">
+        <div class="section-header">
+            <h2>Nuestros Servicios</h2>
+            <p>Soluciones completas en seguridad electrónica</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-video"></i>
+                <h3>Instalación de Cámaras</h3>
+                <p>Instalación profesional de cámaras CCTV, IP y analógicas en hogares, oficinas y comercios.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Sistemas de Alarmas</h3>
+                <p>Protección perimetral con sensores de movimiento, magnetómetros y centrales de alarma.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-wifi"></i>
+                <h3>Configuración Remota</h3>
+                <p>Acceso remoto a tus cámaras desde cualquier lugar del mundo vía celular o internet.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3>Mantenimiento</h3>
+                <p>Servicio de mantenimiento preventivo y correctivo para garantizar el funcionamiento óptimo.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-building"></i>
+                <h3>Proyectos Empresariales</h3>
+                <p>Diseño e implementación de sistemas de seguridad para empresas de cualquier tamaño.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-clipboard-check"></i>
+                <h3>Cotización Gratuita</h3>
+                <p>Presupuestos sin compromiso. Contáctanos y recibe tu cotización personalizada.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="about-content">
+            <h2>Sobre Nosotros</h2>
+            <p>En SRG Security somos especialistas en soluciones de videovigilancia y seguridad electrónica. Trabajamos
+                con las marcas más reconocidas del mercado como Hikvision y Dahua Technology para garantizar calidad y
+                confiabilidad en cada instalación.</p>
+            <p>Nuestro equipo de profesionales ofrece atención personalizada, desde la asesoría inicial hasta la
+                instalación y mantenimiento de su sistema de seguridad. Protegemos casas, negocios y oficinas con
+                soluciones adaptadas a cada necesidad.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-content">
+            <h2>¿Listo para proteger tu patrimonio?</h2>
+            <p>Contáctanos hoy y recibe atención personalizada y cotización gratuita</p>
+            <div class="contact-buttons">
+                <a href="tel:01132082261" class="contact-btn">
+                    <i class="fas fa-phone"></i>
+                    011-3208-2261
+                </a>
+                <a href="https://wa.me/541132082261" class="contact-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <span style="color: #fff;">SRG</span> <span style="color: #ef4444;">Security</span>
+        </div>
+        <p>Bolivar 484, Merlo, Bs. As.</p>
+        <p>Instalación de Cámaras de Seguridad - Videovigilancia profesional</p>
+        <p style="margin-top: 10px;">Precios sujetos a cambios sin previo aviso</p>
+    </footer>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2><i class="fas fa-shopping-cart"></i> Tu Carrito</h2>
+                <button class="close-btn" onclick="closeCart()">&times;</button>
+            </div>
+            <div id="cartItems"></div>
+            <div class="cart-footer" id="cartFooter" style="display: none;">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="whatsapp-btn" onclick="sendWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    Enviar pedido por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const productsData = {
+            "2MPX ANALOGO": [
+                { name: "XVR 1080 4CH", price: 65025, image: "xvr-4ch" },
+                { name: "XVR 1080 8CH", price: 83087.50, image: "xvr-8ch" },
+                { name: "XVR 1080 16CH", price: 174845, image: "xvr-16ch" },
+                { name: "XVR 1080 32CH", price: 597652, image: "xvr-32ch" },
+                { name: "BULLET B1A21P", price: 21328.20, image: "bullet-b1a21p" },
+                { name: "DOMO T1A21P", price: 19420.80, image: "domo-t1a21p" },
+                { name: "BULLET B2A21P (Metal)", price: 24998.50, image: "bullet-b2a21p" },
+                { name: "DOMO T2A21P (Metal)", price: 24998.50, image: "domo-t2a21p" },
+                { name: "BULLET IL-A", price: 35200.20, image: "bullet-il-a" },
+                { name: "DOMO IL-A", price: 35200.20, image: "domo-il-a" },
+                { name: "DOMO VF D3A21P", price: 39015, image: "domo-d3a21p" },
+                { name: "BULLET VF 1200RP-Z", price: 49130, image: "bullet-vf-1200" },
+                { name: "DOMO PTZ PT1200", price: 72250, image: "domo-ptz" },
+                { name: "HFW1200DP", price: 42627.50, image: "hfw1200dp" }
+            ],
+            "2MPX IP": [
+                { name: "DH-IPC-HFW1230S1P", price: 67626, image: "dh-ipc-hfw1230" },
+                { name: "DH-IPC-HDW1230T1P", price: 65371.80, image: "dh-ipc-hdw1230" },
+                { name: "DH-IPC-HFW1239S1P-LED", price: 79330.50, image: "dh-ipc-fullcolor" },
+                { name: "DH-IPC-HDW1230VP-SA", price: 79287.15, image: "dh-ipc-audio" }
+            ],
+            "5MPX ANALOGO": [
+                { name: "XVR 5MPX 4CH", price: 86700, image: "xvr-5mp-4ch" },
+                { name: "XVR 5MPX 8CH", price: 177735, image: "xvr-5mp-8ch" },
+                { name: "XVR 5MPX 8CH i3", price: 203687.20, image: "xvr-5mp-8ch-i3" },
+                { name: "XVR 5MPX 16CH", price: 257210, image: "xvr-5mp-16ch" },
+                { name: "XVR 5MPX 16CH -it", price: 293566.20, image: "xvr-5mp-16ch-it" },
+                { name: "XVR 5MPX 16CH i3", price: 348187.20, image: "xvr-5mp-16ch-i3" },
+                { name: "XVR 5MPX 32CH i3", price: 731170, image: "xvr-5mp-32ch-i3" },
+                { name: "BULLET 1500CP", price: 39882, image: "bullet-1500cp" },
+                { name: "DOMO T1A51P", price: 33162.75, image: "domo-t1a51p" },
+                { name: "DOMO T2A51P (Metal)", price: 38668.20, image: "domo-t2a51p" },
+                { name: "BULLET B1 A 51", price: 39882, image: "bullet-b1a51" },
+                { name: "BULLET IL-A 5MPX", price: 43205.50, image: "bullet-5mp-il" },
+                { name: "DOMO IL-A 5MPX", price: 43205.50, image: "domo-5mp-il" },
+                { name: "BULLET VF 5MPX", price: 62568.50, image: "bullet-5mp-vf" },
+                { name: "DOMO 5MPX AUDIO", price: 41905, image: "domo-5mp-audio" }
+            ],
+            "NVR (Grabadores)": [
+                { name: "NVR1104HS-S3-H", price: 98838, image: "nvr-1104hs" },
+                { name: "NVR1104HS-POE-S3/H", price: 167620, image: "nvr-1104poe" },
+                { name: "NVR 8CH 1108HS-S3/H", price: 122102.50, image: "nvr-1108hs" },
+                { name: "NVR 8CH 1108HS-8P-S3/H", price: 223975, image: "nvr-1108poe" },
+                { name: "NVR2116HS-S", price: 182070, image: "nvr-2116hs" },
+                { name: "NVR2216-4KS3", price: 308941, image: "nvr-2216-4ks3" },
+                { name: "NVR2216-16P-4KS3", price: 411825, image: "nvr-2216-16p" },
+                { name: "NVR4232-4KS2-I", price: 432055, image: "nvr-4232" },
+                { name: "NVR4232-4K S3", price: 804865, image: "nvr-4232-4k" },
+                { name: "NVR4232-16POE-4KS3", price: 504305, image: "nvr-4232-poe" },
+                { name: "NVR5864-EI 64CH", price: 2296105, image: "nvr-5864" }
+            ],
+            "SWITCH (Red)": [
+                { name: "PFS3005-5ET-L", price: 10404, image: "pfs-3005" },
+                { name: "DH-PFS3005-4ET60-V2 POE", price: 60690, image: "pfs-3005-poe" },
+                { name: "DH-PFS3009-8ET-96-V2 POE", price: 128605, image: "pfs-3009" },
+                { name: "DH-PFS3009-8ET-96-V2 (4P)", price: 98838, image: "pfs-3009-4p" },
+                { name: "DH-CS4218-16ET-135 16P", price: 255765, image: "cs-4218" }
+            ],
+            "KITS MARSHALL": [
+                { name: "KIT MARSHALL GO PLUS (PRO/IP)", price: 229755, image: "kit-marshall-go" },
+                { name: "KIT MARSHALL 4G", price: 274550, image: "kit-marshall-4g" },
+                { name: "PULSAR INFINIT", price: 23409, image: "pulsar-infinit" },
+                { name: "SIRENA SP-400", price: 31212, image: "sirena-sp400" },
+                { name: "REMO COVER 3B", price: 15432.60, image: "remo-cover-3b" },
+                { name: "REMO TOUCH 4B", price: 15432.60, image: "remo-touch-4b" },
+                { name: "BATERIA 12V 7 AMPER", price: 20808, image: "bateria-12v-7a" },
+                { name: "IRIS PET INFINIT", price: 35547, image: "iris-pet-infinit" },
+                { name: "PIR EXTERIOR IRIS PET OUTDOOR", price: 138720, image: "pir-outdoor" },
+                { name: "TECLADO KEY CODER INFINIT", price: 67481.50, image: "teclado-infinit" }
+            ],
+            "ALARMAS DSC": [
+                { name: "CENTRAL DSC + TECLADO5501 + FUENTE 220V/9V", price: 80053, image: "central-dsc" },
+                { name: "SENSOR APERTURA MS37", price: 2601, image: "sensor-ms37" },
+                { name: "SENSOR APERTURA ALEPH", price: 5780, image: "sensor-aleph" },
+                { name: "SENSOR APERTURA METALICO", price: 6502.50, image: "sensor-aper-metal" },
+                { name: "MS-60L SENSOR CORTINA METALICO", price: 12282.50, image: "ms-60l" },
+                { name: "SENSOR MOVIMIENTO LC-100", price: 15028, image: "sensor-lc100" },
+                { name: "SENSOR MOVIMIENTO LC-200", price: 13135.05, image: "sensor-lc200" },
+                { name: "SENSOR MOVIMIENTO LC104", price: 48985.50, image: "sensor-lc104" },
+                { name: "TECLADO 1555 DSC", price: 43393.35, image: "teclado-1555" },
+                { name: "TECLADO 5501 DSC", price: 123258.50, image: "teclado-5501" },
+                { name: "RECEPTORA WIFI", price: 43783.50, image: "receptora-wifi" },
+                { name: "PIR WIFI RF DSC", price: 29911.50, image: "pir-wifi-dsc" },
+                { name: "SENSOR APERTURA RF WIFI C/PILA", price: 20952.50, image: "sensor-rf-wifi" },
+                { name: "SIRENA MP100 INT", price: 7860.80, image: "sirena-mp100" },
+                { name: "SIRENA MP150 EXT", price: 28365.35, image: "sirena-mp150" },
+                { name: "SIRENA SL400 EXT LUZ", price: 27310.50, image: "sirena-sl400" },
+                { name: "SIRENA SL350 L LUZ", price: 13438.50, image: "sirena-sl350" },
+                { name: "SIRENA HC S35 NEGRA INT", price: 6069, image: "sirena-hc-s35" },
+                { name: "SIRENA NAUTICA 30W EXT", price: 26877, image: "sirena-nautica" },
+                { name: "LUZ AZUL SL01L", price: 5780, image: "luz-azul" },
+                { name: "GABINETE ALARMA", price: 12716, image: "gabinete-alarma" },
+                { name: "BARRERA 15 MTS", price: 17340, image: "barrera-15" },
+                { name: "BARRERA 60 MTS", price: 44795, image: "barrera-60" },
+                { name: "BATERIA 12V 7 AMP", price: 18062.50, image: "bateria-12v" },
+                { name: "RECEPTORA EB19", price: 0, image: "receptora-eb19" },
+                { name: "CONTROL RECEPCIONADORA EB19", price: 0, image: "control-eb19" }
+            ],
+            "ALARMAS GARNET": [
+                { name: "PIR 808", price: 18785, image: "pir-808" },
+                { name: "PIR DGB2 DOBLE TECNOLOGIA", price: 52020, image: "pir-dgb2" },
+                { name: "SIRENA MP500 30W NAUTICA", price: 33235, image: "sirena-mp500" },
+                { name: "PIR EXTERIOR", price: 138720, image: "pir-exterior" },
+                { name: "COMUNICADOR IP500", price: 138720, image: "comunicador-ip500" }
+            ],
+            "KITS CÁMARAS DAHUA": [
+                { name: "KIT 2 CAM COMPLETO DAHUA", price: 135830, image: "kit-2cam-dahua" },
+                { name: "KIT 3 CAM COMPLETO DAHUA", price: 161840, image: "kit-3cam-dahua" },
+                { name: "KIT 4 CAM COMPLETO DAHUA", price: 189295, image: "kit-4cam-dahua" },
+                { name: "KIT 6 CAM COMPLETO DAHUA", price: 264435, image: "kit-6cam-dahua" },
+                { name: "KIT 8 CAM COMPLETO DAHUA", price: 322235, image: "kit-8cam-dahua" },
+                { name: "KIT 16 CAM COMPLETO DAHUA", price: 661810, image: "kit-16cam-dahua" },
+                { name: "KIT 2 CAM FULL COLOR + AUDIO DAHUA", price: 160395, image: "kit-2cam-fc" },
+                { name: "KIT 4 CAM FULL COLOR + AUDIO DAHUA", price: 235535, image: "kit-4cam-fc" },
+                { name: "KIT 6 CAM FULL COLOR + AUDIO DAHUA", price: 335240, image: "kit-6cam-fc" },
+                { name: "KIT 8 CAM FULL COLOR + AUDIO DAHUA", price: 414715, image: "kit-8cam-fc" },
+                { name: "KIT 16 CAM FULL COLOR + AUDIO DAHUA", price: 859775, image: "kit-16cam-fc" }
+            ],
+            "KITS CÁMARAS 5MPX": [
+                { name: "KIT 2 CAM 5MPX COMPLETO DAHUA", price: 231200, image: "kit-2cam-5mpx" },
+                { name: "KIT 4 CAM 5MPX COMPLETO DAHUA", price: 281775, image: "kit-4cam-5mpx" },
+                { name: "KIT 6 CAM 5MPX COMPLETO DAHUA", price: 492745, image: "kit-6cam-5mpx" },
+                { name: "KIT 8 CAM 5MPX COMPLETO DAHUA", price: 585225, image: "kit-8cam-5mpx" },
+                { name: "KIT 16 CAM 5MPX COMPLETO DAHUA", price: 1105425, image: "kit-16cam-5mpx" },
+                { name: "KIT 2 CAM 5MPX FULL COLOR + AUDIO", price: 0, image: "kit-2cam-5mpx-fc" },
+                { name: "KIT 4 CAM 5MPX FULL COLOR + AUDIO", price: 303450, image: "kit-4cam-5mpx-fc" },
+                { name: "KIT 6 CAM 5MPX FULL COLOR + AUDIO", price: 0, image: "kit-6cam-5mpx-fc" },
+                { name: "KIT 8 CAM 5MPX FULL COLOR + AUDIO", price: 0, image: "kit-8cam-5mpx-fc" },
+                { name: "KIT 16 CAM 5MPX FULL COLOR + AUDIO", price: 0, image: "kit-16cam-5mpx-fc" }
+            ],
+            "KITS DAHUA + CYGNUS": [
+                { name: "XVR DAHUA + 2 CAM CYGNUS", price: 125715, image: "kit-dahua-2cyg" },
+                { name: "XVR DAHUA + 4 CAM CYGNUS", price: 169065, image: "kit-dahua-4cyg" },
+                { name: "XVR DAHUA + 6 CAM CYGNUS", price: 238425, image: "kit-dahua-6cyg" },
+                { name: "XVR DAHUA + 8 CAM CYGNUS", price: 281775, image: "kit-dahua-8cyg" },
+                { name: "XVR DAHUA + 2 CAM FULL COLOR CYGNUS", price: 137275, image: "kit-dahua-2cyg-fc" },
+                { name: "XVR DAHUA + 4 CAM FULL COLOR CYGNUS", price: 192185, image: "kit-dahua-4cyg-fc" },
+                { name: "XVR DAHUA + 6 CAM FULL COLOR CYGNUS", price: 273105, image: "kit-dahua-6cyg-fc" },
+                { name: "XVR DAHUA + 8 CAM FULL COLOR CYGNUS", price: 330905, image: "kit-dahua-8cyg-fc" }
+            ],
+            "KITS CYGNUS": [
+                { name: "XVR CYGNUS + 2 CAM CYGNUS (DOMO)", price: 117045, image: "kit-cyg-2domo" },
+                { name: "XVR CYGNUS + 4 CAM CYGNUS (DOMO)", price: 162273.50, image: "kit-cyg-4domo" },
+                { name: "XVR CYGNUS + 6 CAM CYGNUS (DOMO)", price: 233945.50, image: "kit-cyg-6domo" },
+                { name: "XVR CYGNUS + 8 CAM CYGNUS (DOMO)", price: 278885, image: "kit-cyg-8domo" }
+            ],
+            "ALARMAS INTELBRAS": [
+                { name: "CENTRAL ANM 24 NET", price: 114155, image: "anm-24net" },
+                { name: "AMT 1000 SMART", price: 139876, image: "amt-1000" },
+                { name: "AMT 2018 SMART", price: 174989.50, image: "amt-2018" },
+                { name: "SENSOR MOV 1000 PET CABLEADO", price: 17773.50, image: "mov-1000-pet" },
+                { name: "SENSOR MOV 1000 SMART", price: 30099.35, image: "mov-1000-smart" },
+                { name: "SENS APER XAC SMART", price: 15461.50, image: "aper-xac" },
+                { name: "SENSOR MOV 7000 CABLEADO", price: 82321.65, image: "mov-7000-cab" },
+                { name: "SENSOR MOV 7000 SMART", price: 97104, image: "mov-7000-smart" },
+                { name: "RECEPTOR RF XAR 4000 WIFI", price: 24854, image: "xar-4000" },
+                { name: "TECLADO XAT 3000 LED", price: 49173.35, image: "xat-3000" },
+                { name: "TECLADO XAT 4000 LCD", price: 68868.70, image: "xat-4000" },
+                { name: "CONTROL XAC 4000 SMART", price: 9826, image: "control-xac" }
+            ],
+            "CERCO ELÉCTRICO": [
+                { name: "CENTRAL 6012 INTELBRAS", price: 69504.50, image: "central-6012" },
+                { name: "CENTRAL 6012 NET INTELBRAS", price: 98231.10, image: "central-6012net" },
+                { name: "AISLADORES DOBLE PINLOCK", price: 332.35, image: "aislador-pinlock" },
+                { name: "AISLADORES ROSCADOS", price: 332.35, image: "aislador-roscado" },
+                { name: "RESORTES GALVANIZADOS", price: 462.40, image: "resorte-galv" },
+                { name: "CARTEL PELIGRO", price: 2456.50, image: "cartel-peligro" },
+                { name: "JABALINA 3/8 1M CON CHICOTE", price: 8381, image: "jabalina" },
+                { name: "CABLE DE ALTA X 50 MTS", price: 41616, image: "cable-alta-50" },
+                { name: "BOBINA ALAMBRE ALUMINIO X 100 MTS", price: 8814.50, image: "bobina-100" },
+                { name: "BOBINA ALAMBRE ALUMINIO X 500 MTS", price: 38292.50, image: "bobina-500" },
+                { name: "SIRENA NEGRA", price: 6069, image: "sirena-negra" },
+                { name: "SIRENA MP150 EXT", price: 28365.35, image: "sirena-mp150-ext" },
+                { name: "BATERIA 12V 7 AMP", price: 18496, image: "bateria-cerco" }
+            ],
+            "ACCESORIOS": [
+                { name: "BALUM", price: 1849.60, image: "balum" },
+                { name: "BALUM RJ45", price: 3901.50, image: "balum-rj45" },
+                { name: "PLUG MACHO", price: 216.75, image: "plug-macho" },
+                { name: "PLUG HEMBRA", price: 216.75, image: "plug-hembra" },
+                { name: "SPLITER 1X4", price: 1459.45, image: "spliter-1x4" },
+                { name: "SPLITER 1X8", price: 1950.75, image: "spliter-1x8" },
+                { name: "RJ45 X 50 UNIDADES", price: 5780, image: "rj45-50" },
+                { name: "RJ45 X 100 UNIDADES", price: 11560, image: "rj45-100" },
+                { name: "CABLE DE RED", price: 578, image: "cable-red" },
+                { name: "CABLE HDMI 1MTS", price: 1878.50, image: "hdmi-1m" },
+                { name: "CABLE HDMI 3MTS", price: 2456.50, image: "hdmi-3m" },
+                { name: "CABLE HDMI 5MTS", price: 4624, image: "hdmi-5m" },
+                { name: "CABLE HDMI 10MTS", price: 11126.50, image: "hdmi-10m" },
+                { name: "CABLE HDMI 15MTS", price: 13005, image: "hdmi-15m" },
+                { name: "CABLE HDMI 20MTS", price: 18785, image: "hdmi-20m" },
+                { name: "CABLE HDMI 30MTS", price: 31790, image: "hdmi-30m" },
+                { name: "CONVERTIDOR RJ45/VGA", price: 14016.50, image: "convertidor-vga" },
+                { name: "CONVERTIDOR RJ45/HDMI", price: 8236.50, image: "convertidor-hdmi" },
+                { name: "FUENTE 2AMP", price: 3323.50, image: "fuente-2a" },
+                { name: "FUENTE 3AMP", price: 4696.25, image: "fuente-3a" },
+                { name: "FUENTE 5AMP INTERLOCK", price: 10837.50, image: "fuente-5a" },
+                { name: "FUENTE 6AMP INTERLOCK", price: 12282.50, image: "fuente-6a" },
+                { name: "FUENTE 7AMP INTERLOCK", price: 13872, image: "fuente-7a" },
+                { name: "FUENTE 5AMP METALICA", price: 9016.80, image: "fuente-5a-metal" },
+                { name: "FUENTE 10AMP METALICA", price: 13019.45, image: "fuente-10a-metal" },
+                { name: "FUENTE 15AMP METALICA", price: 15866.10, image: "fuente-15a-metal" },
+                { name: "UPS 600VA", price: 59678.50, image: "ups-600" },
+                { name: "UPS 1000VA", price: 89590, image: "ups-1000" },
+                { name: "CAJA ESTANCO 9X9", price: 722.50, image: "caja-9x9" },
+                { name: "CAJA ESTANCO 11X11", price: 867, image: "caja-11x11" },
+                { name: "GABINETE 800C", price: 24420.50, image: "gab-800c" },
+                { name: "GABINETE 33X33 BLANCO", price: 28755.50, image: "gab-33x33" },
+                { name: "GABINETE METALICO", price: 27830.70, image: "gab-metal" },
+                { name: "GABINETE AZUL", price: 47020.30, image: "gab-azul" },
+                { name: "GABINETE GRANDE PLASTICO 800F", price: 40402.20, image: "gab-800f" },
+                { name: "GABINETE C/LLAVE", price: 56355, image: "gab-llave" },
+                { name: "RACK 4 UNIDADES", price: 72250, image: "rack-4u" },
+                { name: "RACK 6 UNIDADES", price: 98260, image: "rack-6u" },
+                { name: "RACK 9 UNIDADES", price: 97971, image: "rack-9u" },
+                { name: "CABLE UTP X MTS", price: 390.15, image: "utp-mts" },
+                { name: "CABLE UTP X 100MTS", price: 25000, image: "utp-100" },
+                { name: "CABLE UTP X305MTS PLUS", price: 70573.80, image: "utp-305plus" },
+                { name: "CABLE UTP X305MTS SUDVISION", price: 58956, image: "utp-305sud" },
+                { name: "CABLE UTP 100% COBRE HELLERMANN", price: 174382.60, image: "utp-hellermann" },
+                { name: "CABLE UTP 100% COBRE DAHUA", price: 187850, image: "utp-dahua" },
+                { name: "CABLE UTP 100% COBRE X 100MTS", price: 75140, image: "utp-100cobre" },
+                { name: "DISCO RIGIDO 250GB", price: 9826, image: "hdd-250" },
+                { name: "DISCO RIGIDO 320GB", price: 13727.50, image: "hdd-320" },
+                { name: "DISCO RIGIDO 500GB", price: 27310.50, image: "hdd-500" },
+                { name: "DISCO RIGIDO 1TB", price: 46962.50, image: "hdd-1tb" },
+                { name: "DISCO RIGIDO 2TB", price: 56788.50, image: "hdd-2tb" },
+                { name: "DISCO RIGIDO 2TB NUEVO", price: 130050, image: "hdd-2tb-nuevo" },
+                { name: "DISCO RIGIDO 3TB", price: 75140, image: "hdd-3tb" },
+                { name: "DISCO RIGIDO 4TB", price: 86700, image: "hdd-4tb" },
+                { name: "DISCO RIGIDO 4TB NUEVO", price: 186405, image: "hdd-4tb-nuevo" },
+                { name: "DISCO SOLIDO 120GB", price: 27744, image: "ssd-120" },
+                { name: "DISCO SOLIDO 256GB DAHUA", price: 50286, image: "ssd-256-dahua" },
+                { name: "DISCO SOLIDO 480GB DAHUA", price: 64158, image: "ssd-480-dahua" },
+                { name: "DISCO SOLIDO 1TB", price: 81209, image: "ssd-1tb" },
+                { name: "MICRO SD 64GB", price: 13005, image: "microsd-64" },
+                { name: "MICRO SD 128GB", price: 20230, image: "microsd-128" },
+                { name: "MICRO SD 256GB", price: 43205.50, image: "microsd-256" },
+                { name: "ZAPATILLA BLANCA 4T", price: 5924.50, image: "zapatilla-blanca" },
+                { name: "ZAPATILLA NEGRA 5T", price: 5346.50, image: "zapatilla-negra" },
+                { name: "REJA 15X15", price: 4884.10, image: "reja-15x15" },
+                { name: "REJA 20X20", price: 5866.70, image: "reja-20x20" },
+                { name: "MONITOR 17\" C/VGA Y POWER", price: 49650.20, image: "monitor-17" },
+                { name: "MONITOR 19\" C/VGA Y POWER", price: 57756.65, image: "monitor-19" },
+                { name: "MONITOR 22\" C/VGA Y POWER", price: 70342.60, image: "monitor-22" },
+                { name: "MONITOR 22\" DELL NUEVO HDMI", price: 154326, image: "monitor-22-dell" },
+                { name: "MONITOR 24\" DAHUA NUEVO HDMI", price: 186405, image: "monitor-24-dahua" },
+                { name: "MONITOR-TV 28\" BLUMENT", price: 154456.05, image: "tv-28" },
+                { name: "MONITOR-TV 32\" BLUMENT", price: 189338.35, image: "tv-32" },
+                { name: "ROUTER IMOU", price: 26010, image: "router-imou" },
+                { name: "ROUTER DAHUA", price: 0, image: "router-dahua" },
+                { name: "ROUTER GLC", price: 15606, image: "router-glc" },
+                { name: "ROUTER RUIJIE RG-EW300N", price: 20085.50, image: "router-ruijie" },
+                { name: "CRIMPEADORA", price: 14392.20, image: "crimpeadora" },
+                { name: "TESTER RJ45", price: 6964.90, image: "tester-rj45" }
+            ],
+            "HIKVISION": [
+                { name: "DS-7204HGHI-M1", price: 63464.40, image: "hik-dvr-4ch" },
+                { name: "DS-7208HGHI-M1", price: 115600, image: "hik-dvr-8ch" },
+                { name: "DS-7216HGHI-M1", price: 179902.50, image: "hik-dvr-16ch" },
+                { name: "DS-2CE16D0T-EXIPF BULLET 2MPX", price: 23842.50, image: "hik-bullet-2mpx" },
+                { name: "DS-2CE76D0T-EXIPF DOMO 2MPX", price: 22397.50, image: "hik-domo-2mpx" },
+                { name: "DS-2CE16D0T-LPFS BULLET SMART LIGHT", price: 0, image: "hik-bullet-sl" },
+                { name: "DS-2CE76D0T-LPFS DOMO SMART LIGHT", price: 0, image: "hik-domo-sl" },
+                { name: "DS-2CE10DF0T-PF BULLET COLOR VU", price: 0, image: "hik-bullet-cv" },
+                { name: "DS-2CE70DF0T-PF DOMO COLOR VU", price: 0, image: "hik-domo-cv" }
+            ],
+            "CYGNUS": [
+                { name: "CY XVR6104", price: 52887, image: "cy-xvr-4ch" },
+                { name: "CY XVR6108", price: 61557, image: "cy-xvr-8ch" },
+                { name: "CY XVR6116", price: 143922, image: "cy-xvr-16ch" },
+                { name: "CY HDX 1200 D DOMO 2MPX", price: 16473, image: "cy-domo-2mpx" },
+                { name: "CY HDX 1200 DI DOMO EXT 2MPX", price: 17340, image: "cy-domo-ext-2mpx" },
+                { name: "CY HDX 1200 F BULLET 2MPX", price: 17340, image: "cy-bullet-2mpx" },
+                { name: "CY HDX 1200 FUA BULLET 2MPX", price: 24276, image: "cy-bullet-2mpx-fua" },
+                { name: "CY HDX 1200 DUA DOMO 2MPX", price: 24276, image: "cy-domo-2mpx-fua" },
+                { name: "HDX 1500F BULLET 5MPX", price: 26010, image: "cy-bullet-5mpx" },
+                { name: "HDX 1500 FUA BULLET 5MPX FULL COLOR + AUDIO", price: 40460, image: "cy-bullet-5mpx-fc" }
+            ]
+        };
+
+        let cart = [];
+
+        const categoryIcons = {
+            "2MPX ANALOGO": "fa-video",
+            "2MPX IP": "fa-wifi",
+            "5MPX ANALOGO": "fa-camera",
+            "NVR (Grabadores)": "fa-server",
+            "SWITCH (Red)": "fa-ethernet",
+            "KITS MARSHALL": "fa-shield-alt",
+            "ALARMAS DSC": "fa-bell",
+            "ALARMAS GARNET": "fa-bell",
+            "KITS CÁMARAS DAHUA": "fa-box",
+            "KITS CÁMARAS 5MPX": "fa-box",
+            "KITS DAHUA + CYGNUS": "fa-box",
+            "KITS CYGNUS": "fa-box",
+            "ALARMAS INTELBRAS": "fa-bell",
+            "CERCO ELÉCTRICO": "fa-industry",
+            "ACCESORIOS": "fa-tools",
+            "HIKVISION": "fa-video",
+            "CYGNUS": "fa-video"
+        };
+
+        // Iconos SVG elegantes para cada tipo de producto
+        const productIcons = {
+            bullet: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="bulletGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient></defs>
+                <rect x="10" y="35" width="80" height="30" rx="5" fill="url(#bulletGrad)"/>
+                <circle cx="75" cy="50" r="15" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+                <circle cx="75" cy="50" r="8" fill="#f59e0b"/>
+                <rect x="5" y="45" width="8" height="10" rx="2" fill="#d97706"/>
+            </svg>`,
+            domo: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="domoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient></defs>
+                <ellipse cx="50" cy="45" rx="35" ry="25" fill="url(#domoGrad)"/>
+                <circle cx="50" cy="45" r="15" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+                <circle cx="50" cy="45" r="6" fill="#f59e0b"/>
+                <rect x="35" y="65" width="30" height="20" rx="3" fill="#d97706"/>
+            </svg>`,
+            xvr: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="xvrGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient></defs>
+                <rect x="10" y="25" width="80" height="50" rx="5" fill="url(#xvrGrad)"/>
+                <circle cx="30" cy="40" r="6" fill="#0f172a"/><circle cx="30" cy="40" r="3" fill="#f59e0b"/>
+                <rect x="45" y="35" width="35" height="8" rx="2" fill="#0f172a"/>
+                <rect x="45" y="48" width="35" height="8" rx="2" fill="#0f172a"/>
+                <rect x="45" y="61" width="35" height="8" rx="2" fill="#0f172a"/>
+            </svg>`,
+            nvr: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="nvrGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient></defs>
+                <rect x="10" y="20" width="80" height="60" rx="5" fill="url(#nvrGrad)"/>
+                <rect x="20" y="30" width="60" height="25" rx="3" fill="#0f172a"/>
+                <rect x="25" y="35" width="8" height="5" rx="1" fill="#f59e0b"/>
+                <rect x="35" y="35" width="8" height="5" rx="1" fill="#f59e0b" opacity="0.5"/>
+                <rect x="45" y="35" width="8" height="5" rx="1" fill="#f59e0b" opacity="0.5"/>
+                <rect x="55" y="35" width="8" height="5" rx="1" fill="#f59e0b" opacity="0.5"/>
+                <rect x="65" y="35" width="8" height="5" rx="1" fill="#f59e0b" opacity="0.5"/>
+                <circle cx="30" cy="65" r="4" fill="#0f172a"/><circle cx="30" cy="65" r="2" fill="#f59e0b"/>
+                <rect x="45" y="60" width="40" height="3" rx="1" fill="#0f172a"/>
+                <rect x="45" y="66" width="30" height="3" rx="1" fill="#0f172a"/>
+            </svg>`,
+            switch: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="swGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient></defs>
+                <rect x="10" y="30" width="80" height="40" rx="3" fill="url(#swGrad)"/>
+                <circle cx="25" cy="50" r="5" fill="#0f172a"/><circle cx="25" cy="50" r="2" fill="#f59e0b"/>
+                <circle cx="45" cy="50" r="5" fill="#0f172a"/><circle cx="45" cy="50" r="2" fill="#f59e0b"/>
+                <circle cx="65" cy="50" r="5" fill="#0f172a"/><circle cx="65" cy="50" r="2" fill="#f59e0b"/>
+                <circle cx="85" cy="50" r="5" fill="#0f172a"/><circle cx="85" cy="50" r="2" fill="#f59e0b"/>
+            </svg>`,
+            alarm: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="alarmGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient></defs>
+                <path d="M50 15 L80 35 L80 60 L50 85 L20 60 L20 35 Z" fill="url(#alarmGrad)"/>
+                <circle cx="50" cy="50" r="20" fill="#0f172a"/>
+                <path d="M50 40 L50 55 L42 55" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <circle cx="50" cy="63" r="3" fill="#f59e0b"/>
+            </svg>`,
+            kit: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="kitGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient></defs>
+                <rect x="5" y="35" width="90" height="50" rx="8" fill="url(#kitGrad)"/>
+                <rect x="15" y="20" width="20" height="20" rx="3" fill="#d97706"/>
+                <rect x="40" y="20" width="20" height="20" rx="3" fill="#d97706"/>
+                <rect x="65" y="20" width="20" height="20" rx="3" fill="#d97706"/>
+                <circle cx="25" cy="60" r="8" fill="#0f172a"/><circle cx="25" cy="60" r="4" fill="#f59e0b"/>
+                <circle cx="50" cy="60" r="8" fill="#0f172a"/><circle cx="50" cy="60" r="4" fill="#f59e0b"/>
+                <circle cx="75" cy="60" r="8" fill="#0f172a"/><circle cx="75" cy="60" r="4" fill="#f59e0b"/>
+            </svg>`,
+            cerco: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="cercoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient></defs>
+                <rect x="10" y="20" width="6" height="70" fill="url(#cercoGrad)"/>
+                <rect x="30" y="20" width="6" height="70" fill="url(#cercoGrad)"/>
+                <rect x="50" y="20" width="6" height="70" fill="url(#cercoGrad)"/>
+                <rect x="70" y="20" width="6" height="70" fill="url(#cercoGrad)"/>
+                <rect x="90" y="20" width="6" height="70" fill="url(#cercoGrad)"/>
+                <path d="M10 30 Q50 20 96 30" stroke="#16a34a" stroke-width="3" fill="none"/>
+                <path d="M10 50 Q50 40 96 50" stroke="#16a34a" stroke-width="3" fill="none"/>
+                <path d="M10 70 Q50 60 96 70" stroke="#16a34a" stroke-width="3" fill="none"/>
+            </svg>`,
+            default: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="defGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient></defs>
+                <rect x="15" y="25" width="70" height="50" rx="8" fill="url(#defGrad)"/>
+                <circle cx="50" cy="50" r="18" fill="#0f172a"/>
+                <circle cx="50" cy="50" r="10" fill="#f59e0b"/>
+                <circle cx="50" cy="50" r="4" fill="#0f172a"/>
+            </svg>`
+        };
+
+        const iconMap = {
+            'bullet-b1a21p': 'bullet', 'bullet-b2a21p': 'bullet', 'bullet-il-a': 'bullet',
+            'bullet-vf-1200': 'bullet', 'hfw1200dp': 'bullet', 'bullet-b1a51': 'bullet',
+            'bullet-5mp-il': 'bullet', 'bullet-5mp-vf': 'bullet', 'dh-ipc-hfw1230': 'bullet',
+            'dh-ipc-fullcolor': 'bullet', 'hik-bullet-2mpx': 'bullet', 'hik-bullet-sl': 'bullet',
+            'hik-bullet-cv': 'bullet', 'cy-bullet-2mpx': 'bullet', 'cy-bullet-2mpx-fua': 'bullet',
+            'cy-bullet-5mpx': 'bullet', 'cy-bullet-5mpx-fc': 'bullet',
+            'domo-t1a21p': 'domo', 'domo-t2a21p': 'domo', 'domo-il-a': 'domo',
+            'domo-d3a21p': 'domo', 'domo-ptz': 'domo', 'domo-t1a51p': 'domo',
+            'domo-t2a51p': 'domo', 'domo-5mp-il': 'domo', 'domo-5mp-audio': 'domo',
+            'dh-ipc-hdw1230': 'domo', 'dh-ipc-audio': 'domo', 'hik-domo-2mpx': 'domo',
+            'hik-domo-sl': 'domo', 'hik-domo-cv': 'domo', 'cy-domo-2mpx': 'domo',
+            'cy-domo-ext-2mpx': 'domo', 'cy-domo-2mpx-fua': 'domo',
+            'xvr-4ch': 'xvr', 'xvr-8ch': 'xvr', 'xvr-16ch': 'xvr', 'xvr-32ch': 'xvr',
+            'nvr-1104hs': 'nvr', 'nvr-1104poe': 'nvr', 'nvr-1108hs': 'nvr',
+            'nvr-1108poe': 'nvr', 'nvr-2116hs': 'nvr', 'nvr-2216-4ks3': 'nvr',
+            'nvr-2216-16p': 'nvr', 'nvr-4232': 'nvr', 'nvr-4232-4k': 'nvr',
+            'nvr-4232-poe': 'nvr', 'nvr-5864': 'nvr', 'hik-dvr-4ch': 'nvr',
+            'hik-dvr-8ch': 'nvr', 'hik-dvr-16ch': 'nvr', 'cy-xvr-4ch': 'xvr',
+            'cy-xvr-8ch': 'xvr', 'cy-xvr-16ch': 'xvr',
+            'pfs-3005': 'switch', 'pfs-3005-poe': 'switch', 'pfs-3009': 'switch',
+            'pfs-3009-4p': 'switch', 'cs-4218': 'switch'
+        };
+
+        // Mapa de product.image → nombre de archivo real en /images/
+        const imageFileMap = {
+            'xvr-4ch': 'xvr-1080-4ch', 'xvr-8ch': 'xvr-1080-8ch',
+            'xvr-16ch': 'xvr-1080-16ch', 'xvr-32ch': 'xvr-1080-32ch',
+            'bullet-b1a21p': 'bullet-b1a21p', 'domo-t1a21p': 'domo-t1a21p',
+            'bullet-b2a21p': 'bullet-b2a21p--metal', 'domo-t2a21p': 'domo-t2a21p',
+            'bullet-il-a': 'bullet-il-a', 'domo-il-a': 'domo-il-a',
+            'domo-d3a21p': 'domo-d3a21p', 'bullet-vf-1200': 'bullet-vf-1200rp-z',
+            'domo-ptz': 'domo-ptz-pt1200', 'hfw1200dp': 'hfw1200dp',
+            'dh-ipc-hfw1230': 'dh-ipc-hfw1230s1p', 'dh-ipc-hdw1230': 'dh-ipc-hdw1230t1p',
+            'dh-ipc-fullcolor': 'dh-ipc-hfw1239s1p-led', 'dh-ipc-audio': 'dh-ipc-hdw1230vp-sa',
+            'xvr-5mp-4ch': 'xvr-5mpx-4ch', 'xvr-5mp-8ch': 'xvr-5mpx-8ch',
+            'xvr-5mp-8ch-i3': 'xvr-5mpx-8ch-i3', 'xvr-5mp-16ch': 'xvr-5mpx-16ch',
+            'xvr-5mp-16ch-it': 'xvr-5mpx-16ch--it', 'xvr-5mp-16ch-i3': 'xvr-5mpx-16ch-i3',
+            'xvr-5mp-32ch-i3': 'xvr-5mpx-32ch-i3', 'bullet-1500cp': 'bullet-b1-a-51',
+            'domo-t1a51p': 'domo-t1a21p', 'domo-t2a51p': 'domo-t2a51p-metal',
+            'bullet-b1a51': 'bullet-b1-a-51', 'bullet-5mp-il': 'bullet-il-a-5mpx',
+            'domo-5mp-il': 'domo-il-a-5mpx', 'bullet-5mp-vf': 'bullet-vf-5mpx',
+            'domo-5mp-audio': 'domo-5mpx-audio-1500tlmqp',
+            'nvr-1104hs': 'nvr1104hs-s3-h', 'nvr-1104poe': 'nvr1104hs-s3-h',
+            'nvr-1108hs': 'nvr1108hs-w-s2-8ch', 'nvr-1108poe': 'nvr-8-ch-dahua-1108hs-8p-s3-h-poe',
+            'nvr-2116hs': 'nvr2116hs-s', 'nvr-2216-4ks3': 'nvr2216-4ks3',
+            'nvr-2216-16p': 'nvr2216-4ks3', 'nvr-4232': 'nvr4232-4ks2-i',
+            'nvr-4232-4k': 'nvr-4232--4k-s3', 'nvr-4232-poe': 'nvr4232-16poe-4ks3',
+            'nvr-5864': 'nvr5864-ei-64-ch',
+            'pfs-3005': 'pfs3005-5et-l', 'pfs-3005-poe': 'dh-pfs3009-8et-96-v2-poe',
+            'pfs-3009': 'dh-pfs3009-8et-96-v2-poe', 'pfs-3009-4p': 'dh-pfs3009-8et-96-v2--4p-poe',
+            'cs-4218': 'dh-pfs3009-8et-96-v2-poe',
+            'kit-marshall-go': 'kit-marshall-go-plus---pro---ip', 'kit-marshall-4g': 'kit-marshall-4g',
+            'pulsar-infinit': 'pulsar-infinit', 'sirena-sp400': 'sirena-sp-400',
+            'remo-cover-3b': 'remo---remo-touch---4b', 'remo-touch-4b': 'remo---remo-touch---4b',
+            'bateria-12v-7a': 'bateria---12-vol-7-amper',
+            'iris-pet-infinit': 'iris-pet-infinit', 'pir-outdoor': 'pir-exterior---iris-pet-outdoor',
+            'teclado-infinit': 'teclado---key-coder-infinit',
+            'balum': 'balum', 'balum-rj45': 'balum-rj45',
+            'plug-macho': 'plug-macho', 'plug-hembra': 'plug-hembra',
+            'spliter-1x4': 'spliter-1x4', 'spliter-1x8': 'spliter-1x8',
+            'rj45-50': 'rj45-x-50-unidades', 'rj45-100': 'rj45-x-100-unidades',
+            'cable-red': 'cable-de-red',
+            'hdmi-1m': 'cable-hdmi-1mts', 'hdmi-3m': 'cable-hdmi-3mts',
+            'hdmi-5m': 'cable-hdmi-5mts', 'hdmi-10m': 'cable-hdmi-10mts',
+            'hdmi-15m': 'cable-hdmi-15mts', 'hdmi-20m': 'cable-hdmi-20mts',
+            'hdmi-30m': 'cable-hdmi-30mts',
+            'convertidor-vga': 'convertidor-rj45-vga', 'convertidor-hdmi': 'convertidor-rj45-hdmi',
+            'fuente-2a': 'fuente-2amp', 'fuente-3a': 'fuente-3amp',
+            'fuente-5a': 'fuente-5amp-interlock', 'fuente-6a': 'fuente-6amp-interlock',
+            'fuente-7a': 'fuente-7amp-interlock', 'fuente-5a-metal': 'fuente-5amp-metalica',
+            'fuente-10a-metal': 'fuente-10amp-metalica', 'fuente-15a-metal': 'fuente-15amp-metalica',
+            'ups-600': 'ups-600va', 'ups-1000': 'ups-1000va',
+            'caja-11x11': 'caja-estanco-11x11',
+            'gab-800c': 'gabinete-800c', 'gab-33x33': 'gabinete-33x33-blanco',
+            'gab-metal': 'gabinete-metalico', 'gab-azul': 'gabinete-azul',
+            'gab-800f': 'gabinete-grande-plastico-800f', 'gab-llave': 'gabinete-c-llave',
+            'rack-4u': 'rack-4-unidades', 'rack-6u': 'rack-6-unidades',
+            'rack-9u': 'rack-9-unidades',
+            'utp-mts': 'cable-utp-x-mts', 'utp-100': 'cable-utp-x-100mts',
+            'utp-305plus': 'cable-utp-x305mts-plus', 'utp-305sud': 'cable-utp-x305mts-sudvision',
+            'utp-hellermann': 'cable-utp-100--cobre-hellermann',
+            'utp-dahua': 'cable-utp-100-cobre-dahua', 'utp-100cobre': 'cable-utp-100--cobre-x-100mts',
+            'hdd-320': 'disco-rigido-320gb', 'hdd-500': 'disco-rigido-320gb',
+            'ssd-256-dahua': 'disco-solido-256gb-dahua', 'ssd-480-dahua': 'disco-solido-480gb-dahua',
+            'ssd-1tb': 'disco-solido-1tb',
+            'microsd-256': 'micro-sd-256-gb',
+            'reja-15x15': 'reja-15x15', 'reja-20x20': 'reja-20x20',
+            'monitor-17': 'monitor-17--c-vga-y-power', 'monitor-19': 'monitor-19--c-vga-y-power',
+            'monitor-22': 'monitor-22--c-vga-y-power', 'monitor-24-dahua': 'monitor-24--dahua-nuevo-hdmi',
+            'tv-32': 'monitor---tv-32--blument',
+            'router-imou': 'router-imou', 'router-glc': 'router-glc',
+            'router-ruijie': 'router-ruijie-rg-ew300n', 'crimpeadora': 'crimpeadora',
+            'hik-dvr-4ch': 'nvr1104hs-s3-h', 'hik-dvr-8ch': 'nvr1108hs-w-s2-8ch',
+            'hik-dvr-16ch': 'nvr2116hs-s',
+            'cy-xvr-4ch': 'xvr-5mpx-4ch', 'cy-xvr-8ch': 'xvr-5mpx-8ch',
+            'cy-xvr-16ch': 'xvr-5mpx-16ch',
+            'cy-domo-2mpx': 'domo-t1a21p', 'cy-domo-ext-2mpx': 'domo-t2a21p',
+            'cy-bullet-2mpx': 'bullet-b1a21p', 'cy-bullet-2mpx-fua': 'bullet-b2a21p--metal',
+            'cy-domo-2mpx-fua': 'domo-t2a21p',
+            'cy-bullet-5mpx': 'bullet-b1-a-51', 'cy-bullet-5mpx-fc': 'bullet-vf-5mpx'
+        };
+
+        function getProductImage(product) {
+            const iconType = iconMap[product.image] || 'default';
+            // Usa el mapa para obtener el nombre de archivo real; si no existe, convierte el key a minúsculas con guiones
+            const fileName = imageFileMap[product.image] || product.image;
+            // Intenta .jpg primero, .png como fallback se maneja vía onerror
+            return `<div class="product-icon" style="display:none">${productIcons[iconType]}</div>
+                    <img src="images/${fileName}.jpg" alt="${product.name}" class="product-img"
+                         onerror="this.src='images/${fileName}.png'; this.onerror=function(){this.style.display='none'; this.previousElementSibling.style.display='flex';};"
+                         onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+                         style="max-width:100%; max-height:100%; object-fit:contain;">`;
+        }
+
+        function formatPrice(price) {
+            return "$" + price.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        function matchesBrand(product, category, brand) {
+            if (!brand) return true;
+            const searchText = (product.name + " " + category).toUpperCase();
+            const brandPatterns = {
+                "DAHUA": ["DAHUA"],
+                "HIKVISION": ["HIKVISION", "HIK"],
+                "IMOU": ["IMOU"],
+                "INTELBRAS": ["INTELBRAS"],
+                "CYGNUS": ["CYGNUS", "CY-"],
+                "MARSHALL": ["MARSHALL"],
+                "DSC": ["DSC"],
+                "GARNET": ["GARNET"]
+            };
+            const patterns = brandPatterns[brand] || [];
+            return patterns.some(p => searchText.includes(p));
+        }
+
+        function matchesType(category, product, type) {
+            if (!type) return true;
+            const catUpper = category.toUpperCase();
+            const nameUpper = product.name.toUpperCase();
+            const typeMap = {
+                "camara": ["ANALOGO", "2MPX", "5MPX", "IP"],
+                "grabador": ["NVR", "XVR", "DVR", "GRABADOR"],
+                "kit": ["KIT"],
+                "alarma": ["ALARMA", "DSC", "GARNET", "INTELBRAS"],
+                "red": ["SWITCH", "RED"],
+                "accesorio": ["ACCESORIO", "FUENTE", "HDD", "CABLE", "HDM", "RACK", "MONITOR", "UPS", "MICROSD"],
+                "cerco": ["CERCO"]
+            };
+            const patterns = typeMap[type] || [];
+            return patterns.some(p => catUpper.includes(p) || nameUpper.includes(p));
+        }
+
+        function filterProducts() {
+            const searchTerm = document.getElementById("searchInput").value;
+            const brand = document.getElementById("filterBrand").value;
+            const type = document.getElementById("filterType").value;
+            renderProducts(searchTerm, brand, type);
+        }
+
+        function resetFilters() {
+            document.getElementById("searchInput").value = "";
+            document.getElementById("filterBrand").value = "";
+            document.getElementById("filterType").value = "";
+            filterProducts();
+        }
+
+        function renderProducts(filter = "", brand = "", type = "") {
+            const container = document.getElementById("productsContainer");
+            container.innerHTML = "";
+            let hasResults = false;
+            let totalProducts = 0;
+
+            for (const [category, products] of Object.entries(productsData)) {
+                const filteredProducts = products.filter(p => {
+                    const matchesSearch = !filter || p.name.toLowerCase().includes(filter.toLowerCase());
+                    const matchesBrandFilter = matchesBrand(p, category, brand);
+                    const matchesTypeFilter = matchesType(category, p, type);
+                    return matchesSearch && matchesBrandFilter && matchesTypeFilter;
+                });
+
+                if (filteredProducts.length > 0) {
+                    hasResults = true;
+                    totalProducts += filteredProducts.length;
+                    const categorySection = document.createElement("div");
+                    categorySection.className = "category";
+                    categorySection.innerHTML = `
+                        <div class="category-title">
+                            <div class="icon"><i class="fas ${categoryIcons[category] || "fa-box"}"></i></div>
+                            <h3>${category}</h3>
+                            <span>${filteredProducts.length} productos</span>
+                        </div>
+                        <div class="products-grid">
+                            ${filteredProducts.map((p) => `
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        ${getProductImage(p)}
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">${p.name}</div>
+                                        <div class="product-stock">
+                                            <i class="fas fa-check-circle"></i>
+                                            Stock Disponible
+                                        </div>
+                                        <div class="product-footer">
+                                            <span class="product-price">${formatPrice(p.price)}</span>
+                                            <button class="add-btn" onclick="addToCart('${p.name.replace(/'/g, "\\'")}', ${p.price})" title="Agregar al carrito">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join("")}
+                        </div>
+                    `;
+                    container.appendChild(categorySection);
+                }
+            }
+
+            if (!hasResults) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search"></i>
+                        <h3>No se encontraron resultados</h3>
+                        <p>Intenta con otro término de búsqueda o modifica los filtros</p>
+                    </div>
+                `;
+            }
+        }
+
+        function addToCart(name, price) {
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCartUI();
+            showNotification(`<i class="fas fa-check-circle"></i> ${name} agregado`);
+        }
+
+        function removeFromCart(name) {
+            cart = cart.filter(item => item.name !== name);
+            updateCartUI();
+        }
+
+        function updateQuantity(name, delta) {
+            const item = cart.find(i => i.name === name);
+            if (item) {
+                item.quantity += delta;
+                if (item.quantity <= 0) {
+                    removeFromCart(name);
+                } else {
+                    updateCartUI();
+                }
+            }
+        }
+
+        function updateCartUI() {
+            const cartItems = document.getElementById("cartItems");
+            const cartCount = document.getElementById("cartCount");
+            const cartFooter = document.getElementById("cartFooter");
+            const cartTotal = document.getElementById("cartTotal");
+
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="cart-empty">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Tu carrito está vacío</h3>
+                        <p>Agrega productos para realizar tu pedido</p>
+                    </div>
+                `;
+                cartFooter.style.display = "none";
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="25" width="70" height="50" rx="8" fill="#f59e0b"/>
+                                <circle cx="50" cy="50" r="18" fill="#0f172a"/>
+                                <circle cx="50" cy="50" r="10" fill="#f59e0b"/>
+                                <circle cx="50" cy="50" r="4" fill="#0f172a"/>
+                            </svg>
+                        </div>
+                        <div class="cart-item-info">
+                            <div class="cart-item-name">${item.name}</div>
+                            <div class="cart-item-price">${formatPrice(item.price)} c/u</div>
+                        </div>
+                        <div class="cart-item-actions">
+                            <button class="qty-btn" onclick="updateQuantity('${item.name.replace(/'/g, "\\'")}', -1)">-</button>
+                            <span class="qty">${item.quantity}</span>
+                            <button class="qty-btn" onclick="updateQuantity('${item.name.replace(/'/g, "\\'")}', 1)">+</button>
+                            <button class="remove-btn" onclick="removeFromCart('${item.name.replace(/'/g, "\\'")}')">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `).join("");
+
+                const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                cartTotal.textContent = formatPrice(total);
+                cartFooter.style.display = "block";
+            }
+        }
+
+        function openCart() {
+            document.getElementById("cartModal").classList.add("active");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeCart() {
+            document.getElementById("cartModal").classList.remove("active");
+            document.body.style.overflow = "auto";
+        }
+
+        function sendWhatsApp() {
+            if (cart.length === 0) return;
+
+            let message = "🏪 *PEDIDO - SRG SECURITY*\n\n";
+            message += "━━━━━━━━━━━━━━━━━━━━━━\n\n";
+
+            let total = 0;
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                message += `📦 *${item.name}*\n`;
+                message += `   Cantidad: ${item.quantity} pzas\n`;
+                message += `   Precio unitario: ${formatPrice(item.price)}\n`;
+                message += `   Subtotal: ${formatPrice(subtotal)}\n\n`;
+            });
+
+            message += "━━━━━━━━━━━━━━━━━━━━━━\n";
+            message += `💰 *TOTAL: ${formatPrice(total)}*\n\n`;
+            message += "Por favor, confirme disponibilidad y tiempo de entrega.\n";
+            message += "Gracias por su confianza.";
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/541132082261?text=${encodedMessage}`;
+            window.open(whatsappUrl, "_blank");
+        }
+
+        function showNotification(text) {
+            const notification = document.createElement("div");
+            notification.className = "notification";
+            notification.innerHTML = text;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.style.animation = "slideDown 0.3s ease";
+                setTimeout(() => notification.remove(), 300);
+            }, 2000);
+        }
+
+        document.getElementById("cartModal").addEventListener("click", (e) => {
+            if (e.target.id === "cartModal") closeCart();
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeCart();
+        });
+
+        renderProducts();
+    </script>
+</body>
+
+</html>
