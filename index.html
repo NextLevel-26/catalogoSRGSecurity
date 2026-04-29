@@ -1,20 +1,20 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRG Security - Azul | Cámaras de Seguridad</title>
+    <title>SRG Security - Cámaras de Seguridad</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #3b82f6;
-            --primary-dark: #1d4ed8;
-            --dark-bg: #030712;
-            --card-bg: #0f1b30;
-            --card-border: #1e3a5f;
+            --primary: #22c55e;
+            --primary-dark: #16a34a;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
             --text-light: #f8fafc;
             --text-muted: #94a3b8;
         }
@@ -98,9 +98,9 @@
             text-decoration: none;
             font-weight: 500;
             padding: 10px 20px;
-            background: rgba(59, 130, 246, 0.1);
+            background: rgba(34, 197, 94, 0.1);
             border-radius: 10px;
-            border: 1px solid rgba(59, 130, 246, 0.3);
+            border: 1px solid rgba(34, 197, 94, 0.3);
             transition: all 0.3s;
         }
 
@@ -142,7 +142,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(8, 30, 80, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(15, 52, 96, 0.8) 100%);
             padding: 60px 20px;
             text-align: center;
             position: relative;
@@ -209,7 +209,7 @@
         .btn-primary:hover {
             background: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
         }
 
         .btn-outline {
@@ -231,10 +231,10 @@
         }
 
         .features-section {
-            background: rgba(59, 130, 246, 0.05);
+            background: rgba(34, 197, 94, 0.05);
             padding: 50px 20px;
-            border-top: 1px solid rgba(59, 130, 246, 0.2);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            border-top: 1px solid rgba(34, 197, 94, 0.2);
+            border-bottom: 1px solid rgba(34, 197, 94, 0.2);
         }
 
         .features-grid {
@@ -257,7 +257,7 @@
         .feature-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary);
-            background: rgba(59, 130, 246, 0.1);
+            background: rgba(34, 197, 94, 0.1);
         }
 
         .feature-card i {
@@ -297,13 +297,13 @@
         }
 
         .brand-tag {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1));
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
             padding: 12px 25px;
             border-radius: 30px;
             font-size: 0.9rem;
             color: var(--primary);
             font-weight: 600;
-            border: 1px solid rgba(59, 130, 246, 0.3);
+            border: 1px solid rgba(34, 197, 94, 0.3);
         }
 
         .catalog-section {
@@ -348,7 +348,7 @@
         .search-box input:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
         }
 
         .search-box i {
@@ -458,7 +458,7 @@
         .product-card:hover {
             transform: translateY(-8px);
             border-color: var(--primary);
-            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.15);
+            box-shadow: 0 15px 40px rgba(34, 197, 94, 0.15);
         }
 
         .product-image {
@@ -545,7 +545,7 @@
         }
 
         .services-section {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(8, 30, 80, 0.5));
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(15, 52, 96, 0.5));
             padding: 60px 20px;
             margin-top: 50px;
         }
@@ -863,7 +863,7 @@
         }
 
         .whatsapp-btn {
-            background: #3b82f6;
+            background: #22c55e;
             color: #fff;
             border: none;
             width: 100%;
@@ -881,7 +881,7 @@
         }
 
         .whatsapp-btn:hover {
-            background: #1d4ed8;
+            background: #16a34a;
             transform: scale(1.02);
         }
 
@@ -1077,7 +1077,7 @@
                 <option value="">Todas las Marcas</option>
                 <option value="DAHUA">DAHUA</option>
                 <option value="HIKVISION">HIKVISION</option>
-                <option value="IMOU">IMOU</option>
+                <option value="IMOU">IMOU/EZVIZ</option>
                 <option value="INTELBRAS">INTELBRAS</option>
                 <option value="CYGNUS">CYGNUS</option>
                 <option value="MARSHALL">MARSHALL</option>
@@ -1480,6 +1480,37 @@
                 { name: "CY HDX 1200 DUA DOMO 2MPX", price: 24276, image: "cy-domo-2mpx-fua" },
                 { name: "HDX 1500F BULLET 5MPX", price: 26010, image: "cy-bullet-5mpx" },
                 { name: "HDX 1500 FUA BULLET 5MPX FULL COLOR + AUDIO", price: 40460, image: "cy-bullet-5mpx-fc" }
+            ],
+            "IMOU / EZVIZ": [
+                { name: "Cue 2 1080", price: 24360.0, image: "cue-2-1080" },
+                { name: "Cue 2 3mpx", price: 27550.0, image: "cue-2-3mpx" },
+                { name: "Ranger 2c 2mpx", price: 28855.0, image: "ranger-2c-2mpx" },
+                { name: "Ranger 2c 4mpx", price: 43500.0, image: "ranger-2c-4mpx" },
+                { name: "Bullet 2c 1080", price: 43500.0, image: "bullet-2c-1080" },
+                { name: "Bullet 2c 3mpx", price: 42050.0, image: "bullet-2c-3mpx" },
+                { name: "Bullet 2c 5mpx", price: 48000.0, image: "bullet-2c-5mpx" },
+                { name: "Bullet 2e 3mpx", price: 47850.0, image: "bullet-2e-3mpx" },
+                { name: "Bullet 2e 5mpx", price: 57420.0, image: "bullet-2e-5mpx" },
+                { name: "DK7 2mpx 1080", price: 49300.0, image: "dk7-2mpx-1080" },
+                { name: "BULB CAM 2C 3MP (foco)", price: 44950.0, image: "bulb-cam-2c-3mp-foco" },
+                { name: "Cruiser 3mpx", price: 60900.0, image: "cruiser-3mpx" },
+                { name: "Cruiser 5mpx", price: 69600.0, image: "cruiser-5mpx" },
+                { name: "Cruiser Dual 6mpx", price: 88450.0, image: "cruiser-dual-6mpx" },
+                { name: "Cruiser Dual 10mpx", price: 98600.0, image: "cruiser-dual-10mpx" },
+                { name: "Cruiser Triple 11mpx", price: 152250.0, image: "cruiser-triple-11mpx" },
+                { name: "AOV PT 4G 5MP", price: 204450.0, image: "aov-pt-4g-5mp" },
+                { name: "Router HR300", price: 21750.0, image: "router-hr300" },
+                { name: "NVR1104HS-W-S2 4CH", price: 95700.0, image: "nvr1104hs-w-s2-4ch" },
+                { name: "NVR1108HS-W-S2 8CH", price: 111650.0, image: "nvr1108hs-w-s2-8ch" },
+                { name: "MOU NVR N10 - 8AOE", price: 119770.0, image: "mou-nvr-n10-8aoe" },
+                { name: "H3C 1080", price: 52200.0, image: "h3c-1080" },
+                { name: "H3C 1080 F/COLOR", price: 56550.0, image: "h3c-1080-f-color" },
+                { name: "C6N 1080", price: 40600.0, image: "c6n-1080" },
+                { name: "H8C 1080", price: 56550.0, image: "h8c-1080" },
+                { name: "H8C 1080 4G", price: 90436.5, image: "h8c-1080-4g" },
+                { name: "H9C DUAL 5mpx+ 5mpx", price: 121800.0, image: "h9c-dual-5mpx-5mpx" },
+                { name: "EB8 4G C/PANEL SOLAR", price: 290000.0, image: "eb8-4g-c-panel-solar" },
+                { name: "EB3 C/ PANEL SOLAR", price: 169650.0, image: "eb3-c-panel-solar" }
             ]
         };
 
@@ -1502,73 +1533,74 @@
             "CERCO ELÉCTRICO": "fa-industry",
             "ACCESORIOS": "fa-tools",
             "HIKVISION": "fa-video",
-            "CYGNUS": "fa-video"
+            "CYGNUS": "fa-video",
+            "IMOU / EZVIZ": "fa-camera"
         };
 
         // Iconos SVG elegantes para cada tipo de producto
         const productIcons = {
             bullet: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs><linearGradient id="bulletGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#1d4ed8"/></linearGradient></defs>
+                <defs><linearGradient id="bulletGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient></defs>
                 <rect x="10" y="35" width="80" height="30" rx="5" fill="url(#bulletGrad)"/>
-                <circle cx="75" cy="50" r="15" fill="#0f172a" stroke="#3b82f6" stroke-width="2"/>
-                <circle cx="75" cy="50" r="8" fill="#3b82f6"/>
-                <rect x="5" y="45" width="8" height="10" rx="2" fill="#1d4ed8"/>
+                <circle cx="75" cy="50" r="15" fill="#0f172a" stroke="#22c55e" stroke-width="2"/>
+                <circle cx="75" cy="50" r="8" fill="#22c55e"/>
+                <rect x="5" y="45" width="8" height="10" rx="2" fill="#16a34a"/>
             </svg>`,
             domo: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs><linearGradient id="domoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#1d4ed8"/></linearGradient></defs>
+                <defs><linearGradient id="domoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient></defs>
                 <ellipse cx="50" cy="45" rx="35" ry="25" fill="url(#domoGrad)"/>
-                <circle cx="50" cy="45" r="15" fill="#0f172a" stroke="#3b82f6" stroke-width="2"/>
-                <circle cx="50" cy="45" r="6" fill="#3b82f6"/>
-                <rect x="35" y="65" width="30" height="20" rx="3" fill="#1d4ed8"/>
+                <circle cx="50" cy="45" r="15" fill="#0f172a" stroke="#22c55e" stroke-width="2"/>
+                <circle cx="50" cy="45" r="6" fill="#22c55e"/>
+                <rect x="35" y="65" width="30" height="20" rx="3" fill="#16a34a"/>
             </svg>`,
             xvr: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs><linearGradient id="xvrGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#1d4ed8"/></linearGradient></defs>
+                <defs><linearGradient id="xvrGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient></defs>
                 <rect x="10" y="25" width="80" height="50" rx="5" fill="url(#xvrGrad)"/>
-                <circle cx="30" cy="40" r="6" fill="#0f172a"/><circle cx="30" cy="40" r="3" fill="#3b82f6"/>
+                <circle cx="30" cy="40" r="6" fill="#0f172a"/><circle cx="30" cy="40" r="3" fill="#22c55e"/>
                 <rect x="45" y="35" width="35" height="8" rx="2" fill="#0f172a"/>
                 <rect x="45" y="48" width="35" height="8" rx="2" fill="#0f172a"/>
                 <rect x="45" y="61" width="35" height="8" rx="2" fill="#0f172a"/>
             </svg>`,
             nvr: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs><linearGradient id="nvrGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#1d4ed8"/></linearGradient></defs>
+                <defs><linearGradient id="nvrGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient></defs>
                 <rect x="10" y="20" width="80" height="60" rx="5" fill="url(#nvrGrad)"/>
                 <rect x="20" y="30" width="60" height="25" rx="3" fill="#0f172a"/>
-                <rect x="25" y="35" width="8" height="5" rx="1" fill="#3b82f6"/>
-                <rect x="35" y="35" width="8" height="5" rx="1" fill="#3b82f6" opacity="0.5"/>
-                <rect x="45" y="35" width="8" height="5" rx="1" fill="#3b82f6" opacity="0.5"/>
-                <rect x="55" y="35" width="8" height="5" rx="1" fill="#3b82f6" opacity="0.5"/>
-                <rect x="65" y="35" width="8" height="5" rx="1" fill="#3b82f6" opacity="0.5"/>
-                <circle cx="30" cy="65" r="4" fill="#0f172a"/><circle cx="30" cy="65" r="2" fill="#3b82f6"/>
+                <rect x="25" y="35" width="8" height="5" rx="1" fill="#22c55e"/>
+                <rect x="35" y="35" width="8" height="5" rx="1" fill="#22c55e" opacity="0.5"/>
+                <rect x="45" y="35" width="8" height="5" rx="1" fill="#22c55e" opacity="0.5"/>
+                <rect x="55" y="35" width="8" height="5" rx="1" fill="#22c55e" opacity="0.5"/>
+                <rect x="65" y="35" width="8" height="5" rx="1" fill="#22c55e" opacity="0.5"/>
+                <circle cx="30" cy="65" r="4" fill="#0f172a"/><circle cx="30" cy="65" r="2" fill="#22c55e"/>
                 <rect x="45" y="60" width="40" height="3" rx="1" fill="#0f172a"/>
                 <rect x="45" y="66" width="30" height="3" rx="1" fill="#0f172a"/>
             </svg>`,
             switch: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs><linearGradient id="swGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#1d4ed8"/></linearGradient></defs>
+                <defs><linearGradient id="swGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient></defs>
                 <rect x="10" y="30" width="80" height="40" rx="3" fill="url(#swGrad)"/>
-                <circle cx="25" cy="50" r="5" fill="#0f172a"/><circle cx="25" cy="50" r="2" fill="#3b82f6"/>
-                <circle cx="45" cy="50" r="5" fill="#0f172a"/><circle cx="45" cy="50" r="2" fill="#3b82f6"/>
-                <circle cx="65" cy="50" r="5" fill="#0f172a"/><circle cx="65" cy="50" r="2" fill="#3b82f6"/>
-                <circle cx="85" cy="50" r="5" fill="#0f172a"/><circle cx="85" cy="50" r="2" fill="#3b82f6"/>
+                <circle cx="25" cy="50" r="5" fill="#0f172a"/><circle cx="25" cy="50" r="2" fill="#22c55e"/>
+                <circle cx="45" cy="50" r="5" fill="#0f172a"/><circle cx="45" cy="50" r="2" fill="#22c55e"/>
+                <circle cx="65" cy="50" r="5" fill="#0f172a"/><circle cx="65" cy="50" r="2" fill="#22c55e"/>
+                <circle cx="85" cy="50" r="5" fill="#0f172a"/><circle cx="85" cy="50" r="2" fill="#22c55e"/>
             </svg>`,
             alarm: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs><linearGradient id="alarmGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#1d4ed8"/></linearGradient></defs>
+                <defs><linearGradient id="alarmGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient></defs>
                 <path d="M50 15 L80 35 L80 60 L50 85 L20 60 L20 35 Z" fill="url(#alarmGrad)"/>
                 <circle cx="50" cy="50" r="20" fill="#0f172a"/>
-                <path d="M50 40 L50 55 L42 55" stroke="#3b82f6" stroke-width="4" fill="none" stroke-linecap="round"/>
-                <circle cx="50" cy="63" r="3" fill="#3b82f6"/>
+                <path d="M50 40 L50 55 L42 55" stroke="#22c55e" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <circle cx="50" cy="63" r="3" fill="#22c55e"/>
             </svg>`,
             kit: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs><linearGradient id="kitGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#1d4ed8"/></linearGradient></defs>
+                <defs><linearGradient id="kitGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient></defs>
                 <rect x="5" y="35" width="90" height="50" rx="8" fill="url(#kitGrad)"/>
-                <rect x="15" y="20" width="20" height="20" rx="3" fill="#1d4ed8"/>
-                <rect x="40" y="20" width="20" height="20" rx="3" fill="#1d4ed8"/>
-                <rect x="65" y="20" width="20" height="20" rx="3" fill="#1d4ed8"/>
-                <circle cx="25" cy="60" r="8" fill="#0f172a"/><circle cx="25" cy="60" r="4" fill="#3b82f6"/>
-                <circle cx="50" cy="60" r="8" fill="#0f172a"/><circle cx="50" cy="60" r="4" fill="#3b82f6"/>
-                <circle cx="75" cy="60" r="8" fill="#0f172a"/><circle cx="75" cy="60" r="4" fill="#3b82f6"/>
+                <rect x="15" y="20" width="20" height="20" rx="3" fill="#16a34a"/>
+                <rect x="40" y="20" width="20" height="20" rx="3" fill="#16a34a"/>
+                <rect x="65" y="20" width="20" height="20" rx="3" fill="#16a34a"/>
+                <circle cx="25" cy="60" r="8" fill="#0f172a"/><circle cx="25" cy="60" r="4" fill="#22c55e"/>
+                <circle cx="50" cy="60" r="8" fill="#0f172a"/><circle cx="50" cy="60" r="4" fill="#22c55e"/>
+                <circle cx="75" cy="60" r="8" fill="#0f172a"/><circle cx="75" cy="60" r="4" fill="#22c55e"/>
             </svg>`,
             cerco: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs><linearGradient id="cercoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#1d4ed8"/></linearGradient></defs>
+                <defs><linearGradient id="cercoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient></defs>
                 <rect x="10" y="20" width="6" height="70" fill="url(#cercoGrad)"/>
                 <rect x="30" y="20" width="6" height="70" fill="url(#cercoGrad)"/>
                 <rect x="50" y="20" width="6" height="70" fill="url(#cercoGrad)"/>
@@ -1579,10 +1611,10 @@
                 <path d="M10 70 Q50 60 96 70" stroke="#16a34a" stroke-width="3" fill="none"/>
             </svg>`,
             default: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs><linearGradient id="defGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#1d4ed8"/></linearGradient></defs>
+                <defs><linearGradient id="defGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient></defs>
                 <rect x="15" y="25" width="70" height="50" rx="8" fill="url(#defGrad)"/>
                 <circle cx="50" cy="50" r="18" fill="#0f172a"/>
-                <circle cx="50" cy="50" r="10" fill="#3b82f6"/>
+                <circle cx="50" cy="50" r="10" fill="#22c55e"/>
                 <circle cx="50" cy="50" r="4" fill="#0f172a"/>
             </svg>`
         };
@@ -1712,7 +1744,7 @@
             const brandPatterns = {
                 "DAHUA": ["DAHUA"],
                 "HIKVISION": ["HIKVISION", "HIK"],
-                "IMOU": ["IMOU"],
+                "IMOU": ["IMOU", "EZVIZ", "IMOU / EZVIZ"],
                 "INTELBRAS": ["INTELBRAS"],
                 "CYGNUS": ["CYGNUS", "CY-"],
                 "MARSHALL": ["MARSHALL"],
@@ -1765,7 +1797,8 @@
                     const matchesSearch = !filter || p.name.toLowerCase().includes(filter.toLowerCase());
                     const matchesBrandFilter = matchesBrand(p, category, brand);
                     const matchesTypeFilter = matchesType(category, p, type);
-                    return matchesSearch && matchesBrandFilter && matchesTypeFilter;
+                    const hasPrice = p.price > 0;
+                    return matchesSearch && matchesBrandFilter && matchesTypeFilter && hasPrice;
                 });
 
                 if (filteredProducts.length > 0) {
@@ -1868,9 +1901,9 @@
                     <div class="cart-item">
                         <div class="cart-item-image">
                             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="15" y="25" width="70" height="50" rx="8" fill="#3b82f6"/>
+                                <rect x="15" y="25" width="70" height="50" rx="8" fill="#22c55e"/>
                                 <circle cx="50" cy="50" r="18" fill="#0f172a"/>
-                                <circle cx="50" cy="50" r="10" fill="#3b82f6"/>
+                                <circle cx="50" cy="50" r="10" fill="#22c55e"/>
                                 <circle cx="50" cy="50" r="4" fill="#0f172a"/>
                             </svg>
                         </div>

@@ -1480,6 +1480,37 @@
                 { name: "CY HDX 1200 DUA DOMO 2MPX", price: 24276, image: "cy-domo-2mpx-fua" },
                 { name: "HDX 1500F BULLET 5MPX", price: 26010, image: "cy-bullet-5mpx" },
                 { name: "HDX 1500 FUA BULLET 5MPX FULL COLOR + AUDIO", price: 40460, image: "cy-bullet-5mpx-fc" }
+            ],
+            "IMOU / EZVIZ": [
+                { name: "Cue 2 1080", price: 24360.0, image: "cue-2-1080" },
+                { name: "Cue 2 3mpx", price: 27550.0, image: "cue-2-3mpx" },
+                { name: "Ranger 2c 2mpx", price: 28855.0, image: "ranger-2c-2mpx" },
+                { name: "Ranger 2c 4mpx", price: 43500.0, image: "ranger-2c-4mpx" },
+                { name: "Bullet 2c 1080", price: 43500.0, image: "bullet-2c-1080" },
+                { name: "Bullet 2c 3mpx", price: 42050.0, image: "bullet-2c-3mpx" },
+                { name: "Bullet 2c 5mpx", price: 48000.0, image: "bullet-2c-5mpx" },
+                { name: "Bullet 2e 3mpx", price: 47850.0, image: "bullet-2e-3mpx" },
+                { name: "Bullet 2e 5mpx", price: 57420.0, image: "bullet-2e-5mpx" },
+                { name: "DK7 2mpx 1080", price: 49300.0, image: "dk7-2mpx-1080" },
+                { name: "BULB CAM 2C 3MP (foco)", price: 44950.0, image: "bulb-cam-2c-3mp-foco" },
+                { name: "Cruiser 3mpx", price: 60900.0, image: "cruiser-3mpx" },
+                { name: "Cruiser 5mpx", price: 69600.0, image: "cruiser-5mpx" },
+                { name: "Cruiser Dual 6mpx", price: 88450.0, image: "cruiser-dual-6mpx" },
+                { name: "Cruiser Dual 10mpx", price: 98600.0, image: "cruiser-dual-10mpx" },
+                { name: "Cruiser Triple 11mpx", price: 152250.0, image: "cruiser-triple-11mpx" },
+                { name: "AOV PT 4G 5MP", price: 204450.0, image: "aov-pt-4g-5mp" },
+                { name: "Router HR300", price: 21750.0, image: "router-hr300" },
+                { name: "NVR1104HS-W-S2 4CH", price: 95700.0, image: "nvr1104hs-w-s2-4ch" },
+                { name: "NVR1108HS-W-S2 8CH", price: 111650.0, image: "nvr1108hs-w-s2-8ch" },
+                { name: "MOU NVR N10 - 8AOE", price: 119770.0, image: "mou-nvr-n10-8aoe" },
+                { name: "H3C 1080", price: 52200.0, image: "h3c-1080" },
+                { name: "H3C 1080 F/COLOR", price: 56550.0, image: "h3c-1080-f-color" },
+                { name: "C6N 1080", price: 40600.0, image: "c6n-1080" },
+                { name: "H8C 1080", price: 56550.0, image: "h8c-1080" },
+                { name: "H8C 1080 4G", price: 90436.5, image: "h8c-1080-4g" },
+                { name: "H9C DUAL 5mpx+ 5mpx", price: 121800.0, image: "h9c-dual-5mpx-5mpx" },
+                { name: "EB8 4G C/PANEL SOLAR", price: 290000.0, image: "eb8-4g-c-panel-solar" },
+                { name: "EB3 C/ PANEL SOLAR", price: 169650.0, image: "eb3-c-panel-solar" }
             ]
         };
 
@@ -1502,7 +1533,8 @@
             "CERCO ELÉCTRICO": "fa-industry",
             "ACCESORIOS": "fa-tools",
             "HIKVISION": "fa-video",
-            "CYGNUS": "fa-video"
+            "CYGNUS": "fa-video",
+            "IMOU / EZVIZ": "fa-camera"
         };
 
         // Iconos SVG elegantes para cada tipo de producto
@@ -1712,7 +1744,7 @@
             const brandPatterns = {
                 "DAHUA": ["DAHUA"],
                 "HIKVISION": ["HIKVISION", "HIK"],
-                "IMOU": ["IMOU"],
+                "IMOU": ["IMOU", "EZVIZ", "IMOU / EZVIZ"],
                 "INTELBRAS": ["INTELBRAS"],
                 "CYGNUS": ["CYGNUS", "CY-"],
                 "MARSHALL": ["MARSHALL"],
@@ -1765,7 +1797,8 @@
                     const matchesSearch = !filter || p.name.toLowerCase().includes(filter.toLowerCase());
                     const matchesBrandFilter = matchesBrand(p, category, brand);
                     const matchesTypeFilter = matchesType(category, p, type);
-                    return matchesSearch && matchesBrandFilter && matchesTypeFilter;
+                    const hasPrice = p.price > 0;
+                    return matchesSearch && matchesBrandFilter && matchesTypeFilter && hasPrice;
                 });
 
                 if (filteredProducts.length > 0) {
